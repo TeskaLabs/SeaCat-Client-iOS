@@ -61,3 +61,11 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+seacat-ccore-ios/libseacatcc.a
+seacat-ccore-ios/seacatcc.h
+seacat-ccore-ios/openssl
+
+seacat-ccore-tvos/libseacatcc.a
+seacat-ccore-tvos/seacatcc.h
+seacat-ccore-tvos/openssl
