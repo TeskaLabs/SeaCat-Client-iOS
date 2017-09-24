@@ -1,0 +1,1870 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA88B05A1C815B5D00B92F16 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FF11C813580009A4E34 /* libcrypto.a */; };
+		FA88B05B1C815B6000B92F16 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FF21C813580009A4E34 /* libssl.a */; };
+		FA88B05C1C815B6200B92F16 /* libseacatcc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FA11C813580009A4E34 /* libseacatcc.a */; };
+		FA88B0B21C815BC800B92F16 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA88B0AE1C815BB000B92F16 /* libcrypto.a */; };
+		FA88B0B31C815BCF00B92F16 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA88B0AF1C815BB000B92F16 /* libssl.a */; };
+		FA88B0B41C815BD100B92F16 /* libseacatcc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA88B05E1C815BB000B92F16 /* libseacatcc.a */; };
+		FA9FF1E31C83F50900FC81B4 /* SCURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9FF1E11C83F50900FC81B4 /* SCURLProtocol.h */; };
+		FA9FF1E41C83F50900FC81B4 /* SCURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9FF1E11C83F50900FC81B4 /* SCURLProtocol.h */; };
+		FA9FF1E51C83F50900FC81B4 /* SCURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9FF1E11C83F50900FC81B4 /* SCURLProtocol.h */; };
+		FA9FF1E61C83F50900FC81B4 /* SCURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1E21C83F50900FC81B4 /* SCURLProtocol.m */; };
+		FA9FF1E71C83F50900FC81B4 /* SCURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1E21C83F50900FC81B4 /* SCURLProtocol.m */; };
+		FA9FF1E81C83F50900FC81B4 /* SCURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1E21C83F50900FC81B4 /* SCURLProtocol.m */; };
+		FA9FF1EC1C83FAF800FC81B4 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1EB1C83FAF800FC81B4 /* SplashViewController.m */; };
+		FA9FF1EE1C84115900FC81B4 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1ED1C84115900FC81B4 /* Notifications.m */; };
+		FA9FF1EF1C84115900FC81B4 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1ED1C84115900FC81B4 /* Notifications.m */; };
+		FA9FF1F01C84115900FC81B4 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1ED1C84115900FC81B4 /* Notifications.m */; };
+		FA9FF1F31C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9FF1F11C842C5A00FC81B4 /* SCCanonicalRequest.h */; };
+		FA9FF1F41C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9FF1F11C842C5A00FC81B4 /* SCCanonicalRequest.h */; };
+		FA9FF1F51C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9FF1F11C842C5A00FC81B4 /* SCCanonicalRequest.h */; };
+		FA9FF1F61C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
+		FA9FF1F71C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
+		FA9FF1F81C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
+		FAF34F741C8134BC009A4E34 /* SeaCatiOSClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F731C8134BC009A4E34 /* SeaCatiOSClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF34F811C8134DC009A4E34 /* SeaCattvOSClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F801C8134DC009A4E34 /* SeaCattvOSClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF34F9B1C813522009A4E34 /* SeaCatOSCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF3500F1C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
+		FAF350101C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
+		FAF350121C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
+		FAF350131C8135B9009A4E34 /* SCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FF81C8135B9009A4E34 /* SCFrame.m */; };
+		FAF350141C8135B9009A4E34 /* SCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FF81C8135B9009A4E34 /* SCFrame.m */; };
+		FAF350161C8135B9009A4E34 /* SCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FF81C8135B9009A4E34 /* SCFrame.m */; };
+		FAF350171C8135B9009A4E34 /* SCFramePool.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF91C8135B9009A4E34 /* SCFramePool.h */; };
+		FAF350181C8135B9009A4E34 /* SCFramePool.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF91C8135B9009A4E34 /* SCFramePool.h */; };
+		FAF3501A1C8135B9009A4E34 /* SCFramePool.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF91C8135B9009A4E34 /* SCFramePool.h */; };
+		FAF3501B1C8135B9009A4E34 /* SCFramePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */; };
+		FAF3501C1C8135B9009A4E34 /* SCFramePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */; };
+		FAF3501E1C8135B9009A4E34 /* SCFramePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */; };
+		FAF3501F1C8135B9009A4E34 /* SCReactor.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFB1C8135B9009A4E34 /* SCReactor.h */; };
+		FAF350201C8135B9009A4E34 /* SCReactor.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFB1C8135B9009A4E34 /* SCReactor.h */; };
+		FAF350221C8135B9009A4E34 /* SCReactor.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFB1C8135B9009A4E34 /* SCReactor.h */; };
+		FAF350231C8135B9009A4E34 /* SCReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFC1C8135B9009A4E34 /* SCReactor.m */; };
+		FAF350241C8135B9009A4E34 /* SCReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFC1C8135B9009A4E34 /* SCReactor.m */; };
+		FAF350261C8135B9009A4E34 /* SCReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFC1C8135B9009A4E34 /* SCReactor.m */; };
+		FAF350271C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFE1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h */; };
+		FAF350281C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFE1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h */; };
+		FAF3502A1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFE1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h */; };
+		FAF3502B1C8135B9009A4E34 /* SCFrameProviderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFF1C8135B9009A4E34 /* SCFrameProviderProtocol.h */; };
+		FAF3502C1C8135B9009A4E34 /* SCFrameProviderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFF1C8135B9009A4E34 /* SCFrameProviderProtocol.h */; };
+		FAF3502E1C8135B9009A4E34 /* SCFrameProviderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FFF1C8135B9009A4E34 /* SCFrameProviderProtocol.h */; };
+		FAF3502F1C8135B9009A4E34 /* SCPing.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350011C8135B9009A4E34 /* SCPing.h */; };
+		FAF350301C8135B9009A4E34 /* SCPing.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350011C8135B9009A4E34 /* SCPing.h */; };
+		FAF350321C8135B9009A4E34 /* SCPing.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350011C8135B9009A4E34 /* SCPing.h */; };
+		FAF350331C8135B9009A4E34 /* SCPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350021C8135B9009A4E34 /* SCPing.m */; };
+		FAF350341C8135B9009A4E34 /* SCPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350021C8135B9009A4E34 /* SCPing.m */; };
+		FAF350361C8135B9009A4E34 /* SCPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350021C8135B9009A4E34 /* SCPing.m */; };
+		FAF350371C8135B9009A4E34 /* SCPingFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350031C8135B9009A4E34 /* SCPingFactory.h */; };
+		FAF350381C8135B9009A4E34 /* SCPingFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350031C8135B9009A4E34 /* SCPingFactory.h */; };
+		FAF3503A1C8135B9009A4E34 /* SCPingFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350031C8135B9009A4E34 /* SCPingFactory.h */; };
+		FAF3503B1C8135B9009A4E34 /* SCPingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350041C8135B9009A4E34 /* SCPingFactory.m */; };
+		FAF3503C1C8135B9009A4E34 /* SCPingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350041C8135B9009A4E34 /* SCPingFactory.m */; };
+		FAF3503E1C8135B9009A4E34 /* SCPingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350041C8135B9009A4E34 /* SCPingFactory.m */; };
+		FAF3503F1C8135B9009A4E34 /* SCCSR.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350051C8135B9009A4E34 /* SCCSR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF350401C8135B9009A4E34 /* SCCSR.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350051C8135B9009A4E34 /* SCCSR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF350421C8135B9009A4E34 /* SCCSR.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350051C8135B9009A4E34 /* SCCSR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF350431C8135B9009A4E34 /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
+		FAF350441C8135B9009A4E34 /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
+		FAF350461C8135B9009A4E34 /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
+		FAF350471C8135B9009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF350481C8135B9009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF3504A1C8135B9009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF3504B1C8135B9009A4E34 /* SeaCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCat.m */; };
+		FAF3504C1C8135B9009A4E34 /* SeaCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCat.m */; };
+		FAF3504E1C8135B9009A4E34 /* SeaCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCat.m */; };
+		FAF350531C8135B9009A4E34 /* SeaCatInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */; };
+		FAF350541C8135B9009A4E34 /* SeaCatInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */; };
+		FAF350561C8135B9009A4E34 /* SeaCatInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */; };
+		FAF350571C8135B9009A4E34 /* spdy.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500B1C8135B9009A4E34 /* spdy.h */; };
+		FAF350581C8135B9009A4E34 /* spdy.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500B1C8135B9009A4E34 /* spdy.h */; };
+		FAF3505A1C8135B9009A4E34 /* spdy.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500B1C8135B9009A4E34 /* spdy.h */; };
+		FAF3505B1C8135B9009A4E34 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500D1C8135B9009A4E34 /* Logging.m */; };
+		FAF3505C1C8135B9009A4E34 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500D1C8135B9009A4E34 /* Logging.m */; };
+		FAF3505E1C8135B9009A4E34 /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500D1C8135B9009A4E34 /* Logging.m */; };
+		FAF3505F1C8135B9009A4E34 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500E1C8135B9009A4E34 /* Errors.m */; };
+		FAF350601C8135B9009A4E34 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500E1C8135B9009A4E34 /* Errors.m */; };
+		FAF350621C8135B9009A4E34 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500E1C8135B9009A4E34 /* Errors.m */; };
+		FAF350691C81367C009A4E34 /* libseacatcc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FA11C813580009A4E34 /* libseacatcc.a */; };
+		FAF3506A1C81367E009A4E34 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FF11C813580009A4E34 /* libcrypto.a */; };
+		FAF3506B1C813681009A4E34 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FF21C813580009A4E34 /* libssl.a */; };
+		FAF350741C8137C5009A4E34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350731C8137C5009A4E34 /* main.m */; };
+		FAF350771C8137C5009A4E34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350761C8137C5009A4E34 /* AppDelegate.m */; };
+		FAF3507A1C8137C5009A4E34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350791C8137C5009A4E34 /* ViewController.m */; };
+		FAF3507D1C8137C5009A4E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF3507B1C8137C5009A4E34 /* Main.storyboard */; };
+		FAF3507F1C8137C5009A4E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF3507E1C8137C5009A4E34 /* Assets.xcassets */; };
+		FAF350821C8137C5009A4E34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF350801C8137C5009A4E34 /* LaunchScreen.storyboard */; };
+		FAF350871C8137D7009A4E34 /* SeaCatiOSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34F711C8134BC009A4E34 /* SeaCatiOSClient.framework */; };
+		FAF350881C8137D7009A4E34 /* SeaCatiOSClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34F711C8134BC009A4E34 /* SeaCatiOSClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAF350941C813A92009A4E34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350931C813A92009A4E34 /* main.m */; };
+		FAF350971C813A93009A4E34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350961C813A93009A4E34 /* AppDelegate.m */; };
+		FAF3509A1C813A93009A4E34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350991C813A93009A4E34 /* ViewController.m */; };
+		FAF3509D1C813A93009A4E34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF3509B1C813A93009A4E34 /* Main.storyboard */; };
+		FAF3509F1C813A93009A4E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF3509E1C813A93009A4E34 /* Assets.xcassets */; };
+		FAF350A41C813AA4009A4E34 /* SeaCattvOSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34F7E1C8134DC009A4E34 /* SeaCattvOSClient.framework */; };
+		FAF350A51C813AA4009A4E34 /* SeaCattvOSClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34F7E1C8134DC009A4E34 /* SeaCattvOSClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAF350891C8137D7009A4E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF34F581C81334B009A4E34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF34F701C8134BC009A4E34;
+			remoteInfo = SeaCatiOSClient;
+		};
+		FAF350A61C813AA4009A4E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF34F581C81334B009A4E34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF34F7D1C8134DC009A4E34;
+			remoteInfo = SeaCattvOSClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAF3508B1C8137D7009A4E34 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAF350881C8137D7009A4E34 /* SeaCatiOSClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF350A81C813AA4009A4E34 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAF350A51C813AA4009A4E34 /* SeaCattvOSClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FA88B05E1C815BB000B92F16 /* libseacatcc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libseacatcc.a; sourceTree = "<group>"; };
+		FA88B0621C815BB000B92F16 /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		FA88B0631C815BB000B92F16 /* asn1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
+		FA88B0641C815BB000B92F16 /* asn1_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
+		FA88B0651C815BB000B92F16 /* asn1t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
+		FA88B0661C815BB000B92F16 /* bio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
+		FA88B0671C815BB000B92F16 /* blowfish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		FA88B0681C815BB000B92F16 /* bn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
+		FA88B0691C815BB000B92F16 /* buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		FA88B06A1C815BB000B92F16 /* camellia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
+		FA88B06B1C815BB000B92F16 /* cast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
+		FA88B06C1C815BB000B92F16 /* cmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
+		FA88B06D1C815BB000B92F16 /* cms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
+		FA88B06E1C815BB000B92F16 /* comp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		FA88B06F1C815BB000B92F16 /* conf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
+		FA88B0701C815BB000B92F16 /* conf_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
+		FA88B0711C815BB000B92F16 /* crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		FA88B0721C815BB000B92F16 /* des.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
+		FA88B0731C815BB000B92F16 /* des_old.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
+		FA88B0741C815BB000B92F16 /* dh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
+		FA88B0751C815BB000B92F16 /* dsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
+		FA88B0761C815BB000B92F16 /* dso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
+		FA88B0771C815BB000B92F16 /* dtls1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
+		FA88B0781C815BB000B92F16 /* e_os2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		FA88B0791C815BB000B92F16 /* ebcdic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
+		FA88B07A1C815BB000B92F16 /* ec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		FA88B07B1C815BB000B92F16 /* ecdh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
+		FA88B07C1C815BB000B92F16 /* ecdsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		FA88B07D1C815BB000B92F16 /* engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		FA88B07E1C815BB000B92F16 /* err.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		FA88B07F1C815BB000B92F16 /* evp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
+		FA88B0801C815BB000B92F16 /* hmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		FA88B0811C815BB000B92F16 /* idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
+		FA88B0821C815BB000B92F16 /* krb5_asn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
+		FA88B0831C815BB000B92F16 /* kssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
+		FA88B0841C815BB000B92F16 /* lhash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		FA88B0851C815BB000B92F16 /* md4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
+		FA88B0861C815BB000B92F16 /* md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		FA88B0871C815BB000B92F16 /* mdc2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
+		FA88B0881C815BB000B92F16 /* modes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
+		FA88B0891C815BB000B92F16 /* obj_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
+		FA88B08A1C815BB000B92F16 /* objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		FA88B08B1C815BB000B92F16 /* ocsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
+		FA88B08C1C815BB000B92F16 /* opensslconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
+		FA88B08D1C815BB000B92F16 /* opensslv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
+		FA88B08E1C815BB000B92F16 /* ossl_typ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
+		FA88B08F1C815BB000B92F16 /* pem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
+		FA88B0901C815BB000B92F16 /* pem2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
+		FA88B0911C815BB000B92F16 /* pkcs12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
+		FA88B0921C815BB000B92F16 /* pkcs7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
+		FA88B0931C815BB000B92F16 /* pqueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
+		FA88B0941C815BB000B92F16 /* rand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		FA88B0951C815BB000B92F16 /* rc2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
+		FA88B0961C815BB000B92F16 /* rc4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
+		FA88B0971C815BB000B92F16 /* ripemd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		FA88B0981C815BB000B92F16 /* rsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		FA88B0991C815BB000B92F16 /* safestack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
+		FA88B09A1C815BB000B92F16 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		FA88B09B1C815BB000B92F16 /* sha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		FA88B09C1C815BB000B92F16 /* srp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		FA88B09D1C815BB000B92F16 /* srtp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
+		FA88B09E1C815BB000B92F16 /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		FA88B09F1C815BB000B92F16 /* ssl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
+		FA88B0A01C815BB000B92F16 /* ssl23.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
+		FA88B0A11C815BB000B92F16 /* ssl3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
+		FA88B0A21C815BB000B92F16 /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		FA88B0A31C815BB000B92F16 /* symhacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
+		FA88B0A41C815BB000B92F16 /* tls1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
+		FA88B0A51C815BB000B92F16 /* ts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		FA88B0A61C815BB000B92F16 /* txt_db.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
+		FA88B0A71C815BB000B92F16 /* ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
+		FA88B0A81C815BB000B92F16 /* ui_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
+		FA88B0A91C815BB000B92F16 /* whrlpool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
+		FA88B0AA1C815BB000B92F16 /* x509.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		FA88B0AB1C815BB000B92F16 /* x509_vfy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
+		FA88B0AC1C815BB000B92F16 /* x509v3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		FA88B0AE1C815BB000B92F16 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		FA88B0AF1C815BB000B92F16 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		FA88B0B01C815BB000B92F16 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		FA88B0B11C815BB000B92F16 /* seacatcc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seacatcc.h; sourceTree = "<group>"; };
+		FA9FF1E11C83F50900FC81B4 /* SCURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCURLProtocol.h; sourceTree = "<group>"; };
+		FA9FF1E21C83F50900FC81B4 /* SCURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCURLProtocol.m; sourceTree = "<group>"; };
+		FA9FF1EA1C83FAF800FC81B4 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		FA9FF1EB1C83FAF800FC81B4 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		FA9FF1ED1C84115900FC81B4 /* Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
+		FA9FF1F11C842C5A00FC81B4 /* SCCanonicalRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCanonicalRequest.h; sourceTree = "<group>"; };
+		FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCanonicalRequest.m; sourceTree = "<group>"; };
+		FAF34F711C8134BC009A4E34 /* SeaCatiOSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaCatiOSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF34F731C8134BC009A4E34 /* SeaCatiOSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatiOSClient.h; sourceTree = "<group>"; };
+		FAF34F751C8134BC009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF34F7E1C8134DC009A4E34 /* SeaCattvOSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaCattvOSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF34F801C8134DC009A4E34 /* SeaCattvOSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCattvOSClient.h; sourceTree = "<group>"; };
+		FAF34F821C8134DC009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF34F981C813522009A4E34 /* SeaCatOSCClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaCatOSCClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatOSCClient.h; sourceTree = "<group>"; };
+		FAF34F9C1C813522009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF34FA11C813580009A4E34 /* libseacatcc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libseacatcc.a; sourceTree = "<group>"; };
+		FAF34FA51C813580009A4E34 /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		FAF34FA61C813580009A4E34 /* asn1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
+		FAF34FA71C813580009A4E34 /* asn1_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
+		FAF34FA81C813580009A4E34 /* asn1t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
+		FAF34FA91C813580009A4E34 /* bio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
+		FAF34FAA1C813580009A4E34 /* blowfish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		FAF34FAB1C813580009A4E34 /* bn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
+		FAF34FAC1C813580009A4E34 /* buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		FAF34FAD1C813580009A4E34 /* camellia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
+		FAF34FAE1C813580009A4E34 /* cast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
+		FAF34FAF1C813580009A4E34 /* cmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
+		FAF34FB01C813580009A4E34 /* cms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
+		FAF34FB11C813580009A4E34 /* comp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		FAF34FB21C813580009A4E34 /* conf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
+		FAF34FB31C813580009A4E34 /* conf_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
+		FAF34FB41C813580009A4E34 /* crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		FAF34FB51C813580009A4E34 /* des.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
+		FAF34FB61C813580009A4E34 /* des_old.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
+		FAF34FB71C813580009A4E34 /* dh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
+		FAF34FB81C813580009A4E34 /* dsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
+		FAF34FB91C813580009A4E34 /* dso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
+		FAF34FBA1C813580009A4E34 /* dtls1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
+		FAF34FBB1C813580009A4E34 /* e_os2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		FAF34FBC1C813580009A4E34 /* ebcdic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
+		FAF34FBD1C813580009A4E34 /* ec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		FAF34FBE1C813580009A4E34 /* ecdh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
+		FAF34FBF1C813580009A4E34 /* ecdsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		FAF34FC01C813580009A4E34 /* engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		FAF34FC11C813580009A4E34 /* err.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		FAF34FC21C813580009A4E34 /* evp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
+		FAF34FC31C813580009A4E34 /* hmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		FAF34FC41C813580009A4E34 /* idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
+		FAF34FC51C813580009A4E34 /* krb5_asn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
+		FAF34FC61C813580009A4E34 /* kssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
+		FAF34FC71C813580009A4E34 /* lhash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		FAF34FC81C813580009A4E34 /* md4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
+		FAF34FC91C813580009A4E34 /* md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		FAF34FCA1C813580009A4E34 /* mdc2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
+		FAF34FCB1C813580009A4E34 /* modes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
+		FAF34FCC1C813580009A4E34 /* obj_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
+		FAF34FCD1C813580009A4E34 /* objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		FAF34FCE1C813580009A4E34 /* ocsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
+		FAF34FCF1C813580009A4E34 /* opensslconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
+		FAF34FD01C813580009A4E34 /* opensslv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
+		FAF34FD11C813580009A4E34 /* ossl_typ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
+		FAF34FD21C813580009A4E34 /* pem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
+		FAF34FD31C813580009A4E34 /* pem2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
+		FAF34FD41C813580009A4E34 /* pkcs12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
+		FAF34FD51C813580009A4E34 /* pkcs7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
+		FAF34FD61C813580009A4E34 /* pqueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
+		FAF34FD71C813580009A4E34 /* rand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		FAF34FD81C813580009A4E34 /* rc2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
+		FAF34FD91C813580009A4E34 /* rc4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
+		FAF34FDA1C813580009A4E34 /* ripemd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		FAF34FDB1C813580009A4E34 /* rsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		FAF34FDC1C813580009A4E34 /* safestack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
+		FAF34FDD1C813580009A4E34 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		FAF34FDE1C813580009A4E34 /* sha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		FAF34FDF1C813580009A4E34 /* srp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		FAF34FE01C813580009A4E34 /* srtp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
+		FAF34FE11C813580009A4E34 /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		FAF34FE21C813580009A4E34 /* ssl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
+		FAF34FE31C813580009A4E34 /* ssl23.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
+		FAF34FE41C813580009A4E34 /* ssl3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
+		FAF34FE51C813580009A4E34 /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		FAF34FE61C813580009A4E34 /* symhacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
+		FAF34FE71C813580009A4E34 /* tls1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
+		FAF34FE81C813580009A4E34 /* ts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		FAF34FE91C813580009A4E34 /* txt_db.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
+		FAF34FEA1C813580009A4E34 /* ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
+		FAF34FEB1C813580009A4E34 /* ui_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
+		FAF34FEC1C813580009A4E34 /* whrlpool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
+		FAF34FED1C813580009A4E34 /* x509.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		FAF34FEE1C813580009A4E34 /* x509_vfy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
+		FAF34FEF1C813580009A4E34 /* x509v3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		FAF34FF11C813580009A4E34 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		FAF34FF21C813580009A4E34 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		FAF34FF31C813580009A4E34 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		FAF34FF41C813580009A4E34 /* seacatcc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seacatcc.h; sourceTree = "<group>"; };
+		FAF34FF71C8135B9009A4E34 /* SCFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFrame.h; sourceTree = "<group>"; };
+		FAF34FF81C8135B9009A4E34 /* SCFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFrame.m; sourceTree = "<group>"; };
+		FAF34FF91C8135B9009A4E34 /* SCFramePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFramePool.h; sourceTree = "<group>"; };
+		FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFramePool.m; sourceTree = "<group>"; };
+		FAF34FFB1C8135B9009A4E34 /* SCReactor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCReactor.h; sourceTree = "<group>"; };
+		FAF34FFC1C8135B9009A4E34 /* SCReactor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCReactor.m; sourceTree = "<group>"; };
+		FAF34FFE1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCntlFrameConsumerProtocol.h; sourceTree = "<group>"; };
+		FAF34FFF1C8135B9009A4E34 /* SCFrameProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFrameProviderProtocol.h; sourceTree = "<group>"; };
+		FAF350011C8135B9009A4E34 /* SCPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPing.h; sourceTree = "<group>"; };
+		FAF350021C8135B9009A4E34 /* SCPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPing.m; sourceTree = "<group>"; };
+		FAF350031C8135B9009A4E34 /* SCPingFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPingFactory.h; sourceTree = "<group>"; };
+		FAF350041C8135B9009A4E34 /* SCPingFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPingFactory.m; sourceTree = "<group>"; };
+		FAF350051C8135B9009A4E34 /* SCCSR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCSR.h; sourceTree = "<group>"; };
+		FAF350061C8135B9009A4E34 /* SCCSR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCSR.m; sourceTree = "<group>"; };
+		FAF350071C8135B9009A4E34 /* SeaCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeaCat.h; sourceTree = "<group>"; };
+		FAF350081C8135B9009A4E34 /* SeaCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeaCat.m; sourceTree = "<group>"; };
+		FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeaCatInternals.h; sourceTree = "<group>"; };
+		FAF3500B1C8135B9009A4E34 /* spdy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spdy.h; sourceTree = "<group>"; };
+		FAF3500D1C8135B9009A4E34 /* Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logging.m; sourceTree = "<group>"; };
+		FAF3500E1C8135B9009A4E34 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errors.m; sourceTree = "<group>"; };
+		FAF350701C8137C5009A4E34 /* iOSDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF350731C8137C5009A4E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAF350751C8137C5009A4E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAF350761C8137C5009A4E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAF350781C8137C5009A4E34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAF350791C8137C5009A4E34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAF3507C1C8137C5009A4E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAF3507E1C8137C5009A4E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF350811C8137C5009A4E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAF350831C8137C5009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF350901C813A92009A4E34 /* tvOSDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOSDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF350931C813A92009A4E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAF350951C813A93009A4E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAF350961C813A93009A4E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAF350981C813A93009A4E34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAF350991C813A93009A4E34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAF3509C1C813A93009A4E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAF3509E1C813A93009A4E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAF350A01C813A93009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAF34F6D1C8134BC009A4E34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA88B05A1C815B5D00B92F16 /* libcrypto.a in Frameworks */,
+				FA88B05B1C815B6000B92F16 /* libssl.a in Frameworks */,
+				FA88B05C1C815B6200B92F16 /* libseacatcc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F7A1C8134DC009A4E34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA88B0B21C815BC800B92F16 /* libcrypto.a in Frameworks */,
+				FA88B0B31C815BCF00B92F16 /* libssl.a in Frameworks */,
+				FA88B0B41C815BD100B92F16 /* libseacatcc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F941C813522009A4E34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350691C81367C009A4E34 /* libseacatcc.a in Frameworks */,
+				FAF3506A1C81367E009A4E34 /* libcrypto.a in Frameworks */,
+				FAF3506B1C813681009A4E34 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF3506D1C8137C5009A4E34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350871C8137D7009A4E34 /* SeaCatiOSClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF3508D1C813A92009A4E34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350A41C813AA4009A4E34 /* SeaCattvOSClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA88B05D1C815BB000B92F16 /* seacat-ccore-tvos */ = {
+			isa = PBXGroup;
+			children = (
+				FA88B05E1C815BB000B92F16 /* libseacatcc.a */,
+				FA88B05F1C815BB000B92F16 /* openssl */,
+				FA88B0B11C815BB000B92F16 /* seacatcc.h */,
+			);
+			path = "seacat-ccore-tvos";
+			sourceTree = "<group>";
+		};
+		FA88B05F1C815BB000B92F16 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				FA88B0601C815BB000B92F16 /* include */,
+				FA88B0AD1C815BB000B92F16 /* lib */,
+				FA88B0B01C815BB000B92F16 /* README */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		FA88B0601C815BB000B92F16 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FA88B0611C815BB000B92F16 /* openssl */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FA88B0611C815BB000B92F16 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				FA88B0621C815BB000B92F16 /* aes.h */,
+				FA88B0631C815BB000B92F16 /* asn1.h */,
+				FA88B0641C815BB000B92F16 /* asn1_mac.h */,
+				FA88B0651C815BB000B92F16 /* asn1t.h */,
+				FA88B0661C815BB000B92F16 /* bio.h */,
+				FA88B0671C815BB000B92F16 /* blowfish.h */,
+				FA88B0681C815BB000B92F16 /* bn.h */,
+				FA88B0691C815BB000B92F16 /* buffer.h */,
+				FA88B06A1C815BB000B92F16 /* camellia.h */,
+				FA88B06B1C815BB000B92F16 /* cast.h */,
+				FA88B06C1C815BB000B92F16 /* cmac.h */,
+				FA88B06D1C815BB000B92F16 /* cms.h */,
+				FA88B06E1C815BB000B92F16 /* comp.h */,
+				FA88B06F1C815BB000B92F16 /* conf.h */,
+				FA88B0701C815BB000B92F16 /* conf_api.h */,
+				FA88B0711C815BB000B92F16 /* crypto.h */,
+				FA88B0721C815BB000B92F16 /* des.h */,
+				FA88B0731C815BB000B92F16 /* des_old.h */,
+				FA88B0741C815BB000B92F16 /* dh.h */,
+				FA88B0751C815BB000B92F16 /* dsa.h */,
+				FA88B0761C815BB000B92F16 /* dso.h */,
+				FA88B0771C815BB000B92F16 /* dtls1.h */,
+				FA88B0781C815BB000B92F16 /* e_os2.h */,
+				FA88B0791C815BB000B92F16 /* ebcdic.h */,
+				FA88B07A1C815BB000B92F16 /* ec.h */,
+				FA88B07B1C815BB000B92F16 /* ecdh.h */,
+				FA88B07C1C815BB000B92F16 /* ecdsa.h */,
+				FA88B07D1C815BB000B92F16 /* engine.h */,
+				FA88B07E1C815BB000B92F16 /* err.h */,
+				FA88B07F1C815BB000B92F16 /* evp.h */,
+				FA88B0801C815BB000B92F16 /* hmac.h */,
+				FA88B0811C815BB000B92F16 /* idea.h */,
+				FA88B0821C815BB000B92F16 /* krb5_asn.h */,
+				FA88B0831C815BB000B92F16 /* kssl.h */,
+				FA88B0841C815BB000B92F16 /* lhash.h */,
+				FA88B0851C815BB000B92F16 /* md4.h */,
+				FA88B0861C815BB000B92F16 /* md5.h */,
+				FA88B0871C815BB000B92F16 /* mdc2.h */,
+				FA88B0881C815BB000B92F16 /* modes.h */,
+				FA88B0891C815BB000B92F16 /* obj_mac.h */,
+				FA88B08A1C815BB000B92F16 /* objects.h */,
+				FA88B08B1C815BB000B92F16 /* ocsp.h */,
+				FA88B08C1C815BB000B92F16 /* opensslconf.h */,
+				FA88B08D1C815BB000B92F16 /* opensslv.h */,
+				FA88B08E1C815BB000B92F16 /* ossl_typ.h */,
+				FA88B08F1C815BB000B92F16 /* pem.h */,
+				FA88B0901C815BB000B92F16 /* pem2.h */,
+				FA88B0911C815BB000B92F16 /* pkcs12.h */,
+				FA88B0921C815BB000B92F16 /* pkcs7.h */,
+				FA88B0931C815BB000B92F16 /* pqueue.h */,
+				FA88B0941C815BB000B92F16 /* rand.h */,
+				FA88B0951C815BB000B92F16 /* rc2.h */,
+				FA88B0961C815BB000B92F16 /* rc4.h */,
+				FA88B0971C815BB000B92F16 /* ripemd.h */,
+				FA88B0981C815BB000B92F16 /* rsa.h */,
+				FA88B0991C815BB000B92F16 /* safestack.h */,
+				FA88B09A1C815BB000B92F16 /* seed.h */,
+				FA88B09B1C815BB000B92F16 /* sha.h */,
+				FA88B09C1C815BB000B92F16 /* srp.h */,
+				FA88B09D1C815BB000B92F16 /* srtp.h */,
+				FA88B09E1C815BB000B92F16 /* ssl.h */,
+				FA88B09F1C815BB000B92F16 /* ssl2.h */,
+				FA88B0A01C815BB000B92F16 /* ssl23.h */,
+				FA88B0A11C815BB000B92F16 /* ssl3.h */,
+				FA88B0A21C815BB000B92F16 /* stack.h */,
+				FA88B0A31C815BB000B92F16 /* symhacks.h */,
+				FA88B0A41C815BB000B92F16 /* tls1.h */,
+				FA88B0A51C815BB000B92F16 /* ts.h */,
+				FA88B0A61C815BB000B92F16 /* txt_db.h */,
+				FA88B0A71C815BB000B92F16 /* ui.h */,
+				FA88B0A81C815BB000B92F16 /* ui_compat.h */,
+				FA88B0A91C815BB000B92F16 /* whrlpool.h */,
+				FA88B0AA1C815BB000B92F16 /* x509.h */,
+				FA88B0AB1C815BB000B92F16 /* x509_vfy.h */,
+				FA88B0AC1C815BB000B92F16 /* x509v3.h */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		FA88B0AD1C815BB000B92F16 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				FA88B0AE1C815BB000B92F16 /* libcrypto.a */,
+				FA88B0AF1C815BB000B92F16 /* libssl.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		FA9FF1E01C83F50900FC81B4 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				FA9FF1E11C83F50900FC81B4 /* SCURLProtocol.h */,
+				FA9FF1E21C83F50900FC81B4 /* SCURLProtocol.m */,
+				FA9FF1F11C842C5A00FC81B4 /* SCCanonicalRequest.h */,
+				FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		FAF34F571C81334B009A4E34 = {
+			isa = PBXGroup;
+			children = (
+				FAF34FF51C8135B9009A4E34 /* src */,
+				FAF34F721C8134BC009A4E34 /* SeaCatiOSClient */,
+				FAF34FA01C813580009A4E34 /* seacat-ccore-ios */,
+				FAF350711C8137C5009A4E34 /* iOSDemoApp */,
+				FAF34F7F1C8134DC009A4E34 /* SeaCattvOSClient */,
+				FA88B05D1C815BB000B92F16 /* seacat-ccore-tvos */,
+				FAF350911C813A92009A4E34 /* tvOSDemoApp */,
+				FAF34F991C813522009A4E34 /* SeaCatOSCClient */,
+				FAF34F641C8133E4009A4E34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAF34F641C8133E4009A4E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34F711C8134BC009A4E34 /* SeaCatiOSClient.framework */,
+				FAF34F7E1C8134DC009A4E34 /* SeaCattvOSClient.framework */,
+				FAF34F981C813522009A4E34 /* SeaCatOSCClient.framework */,
+				FAF350701C8137C5009A4E34 /* iOSDemoApp.app */,
+				FAF350901C813A92009A4E34 /* tvOSDemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAF34F721C8134BC009A4E34 /* SeaCatiOSClient */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34F731C8134BC009A4E34 /* SeaCatiOSClient.h */,
+				FAF34F751C8134BC009A4E34 /* Info.plist */,
+			);
+			path = SeaCatiOSClient;
+			sourceTree = "<group>";
+		};
+		FAF34F7F1C8134DC009A4E34 /* SeaCattvOSClient */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34F801C8134DC009A4E34 /* SeaCattvOSClient.h */,
+				FAF34F821C8134DC009A4E34 /* Info.plist */,
+			);
+			path = SeaCattvOSClient;
+			sourceTree = "<group>";
+		};
+		FAF34F991C813522009A4E34 /* SeaCatOSCClient */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */,
+				FAF34F9C1C813522009A4E34 /* Info.plist */,
+			);
+			path = SeaCatOSCClient;
+			sourceTree = "<group>";
+		};
+		FAF34FA01C813580009A4E34 /* seacat-ccore-ios */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FA11C813580009A4E34 /* libseacatcc.a */,
+				FAF34FA21C813580009A4E34 /* openssl */,
+				FAF34FF41C813580009A4E34 /* seacatcc.h */,
+			);
+			path = "seacat-ccore-ios";
+			sourceTree = "<group>";
+		};
+		FAF34FA21C813580009A4E34 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FA31C813580009A4E34 /* include */,
+				FAF34FF01C813580009A4E34 /* lib */,
+				FAF34FF31C813580009A4E34 /* README */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		FAF34FA31C813580009A4E34 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FA41C813580009A4E34 /* openssl */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FAF34FA41C813580009A4E34 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FA51C813580009A4E34 /* aes.h */,
+				FAF34FA61C813580009A4E34 /* asn1.h */,
+				FAF34FA71C813580009A4E34 /* asn1_mac.h */,
+				FAF34FA81C813580009A4E34 /* asn1t.h */,
+				FAF34FA91C813580009A4E34 /* bio.h */,
+				FAF34FAA1C813580009A4E34 /* blowfish.h */,
+				FAF34FAB1C813580009A4E34 /* bn.h */,
+				FAF34FAC1C813580009A4E34 /* buffer.h */,
+				FAF34FAD1C813580009A4E34 /* camellia.h */,
+				FAF34FAE1C813580009A4E34 /* cast.h */,
+				FAF34FAF1C813580009A4E34 /* cmac.h */,
+				FAF34FB01C813580009A4E34 /* cms.h */,
+				FAF34FB11C813580009A4E34 /* comp.h */,
+				FAF34FB21C813580009A4E34 /* conf.h */,
+				FAF34FB31C813580009A4E34 /* conf_api.h */,
+				FAF34FB41C813580009A4E34 /* crypto.h */,
+				FAF34FB51C813580009A4E34 /* des.h */,
+				FAF34FB61C813580009A4E34 /* des_old.h */,
+				FAF34FB71C813580009A4E34 /* dh.h */,
+				FAF34FB81C813580009A4E34 /* dsa.h */,
+				FAF34FB91C813580009A4E34 /* dso.h */,
+				FAF34FBA1C813580009A4E34 /* dtls1.h */,
+				FAF34FBB1C813580009A4E34 /* e_os2.h */,
+				FAF34FBC1C813580009A4E34 /* ebcdic.h */,
+				FAF34FBD1C813580009A4E34 /* ec.h */,
+				FAF34FBE1C813580009A4E34 /* ecdh.h */,
+				FAF34FBF1C813580009A4E34 /* ecdsa.h */,
+				FAF34FC01C813580009A4E34 /* engine.h */,
+				FAF34FC11C813580009A4E34 /* err.h */,
+				FAF34FC21C813580009A4E34 /* evp.h */,
+				FAF34FC31C813580009A4E34 /* hmac.h */,
+				FAF34FC41C813580009A4E34 /* idea.h */,
+				FAF34FC51C813580009A4E34 /* krb5_asn.h */,
+				FAF34FC61C813580009A4E34 /* kssl.h */,
+				FAF34FC71C813580009A4E34 /* lhash.h */,
+				FAF34FC81C813580009A4E34 /* md4.h */,
+				FAF34FC91C813580009A4E34 /* md5.h */,
+				FAF34FCA1C813580009A4E34 /* mdc2.h */,
+				FAF34FCB1C813580009A4E34 /* modes.h */,
+				FAF34FCC1C813580009A4E34 /* obj_mac.h */,
+				FAF34FCD1C813580009A4E34 /* objects.h */,
+				FAF34FCE1C813580009A4E34 /* ocsp.h */,
+				FAF34FCF1C813580009A4E34 /* opensslconf.h */,
+				FAF34FD01C813580009A4E34 /* opensslv.h */,
+				FAF34FD11C813580009A4E34 /* ossl_typ.h */,
+				FAF34FD21C813580009A4E34 /* pem.h */,
+				FAF34FD31C813580009A4E34 /* pem2.h */,
+				FAF34FD41C813580009A4E34 /* pkcs12.h */,
+				FAF34FD51C813580009A4E34 /* pkcs7.h */,
+				FAF34FD61C813580009A4E34 /* pqueue.h */,
+				FAF34FD71C813580009A4E34 /* rand.h */,
+				FAF34FD81C813580009A4E34 /* rc2.h */,
+				FAF34FD91C813580009A4E34 /* rc4.h */,
+				FAF34FDA1C813580009A4E34 /* ripemd.h */,
+				FAF34FDB1C813580009A4E34 /* rsa.h */,
+				FAF34FDC1C813580009A4E34 /* safestack.h */,
+				FAF34FDD1C813580009A4E34 /* seed.h */,
+				FAF34FDE1C813580009A4E34 /* sha.h */,
+				FAF34FDF1C813580009A4E34 /* srp.h */,
+				FAF34FE01C813580009A4E34 /* srtp.h */,
+				FAF34FE11C813580009A4E34 /* ssl.h */,
+				FAF34FE21C813580009A4E34 /* ssl2.h */,
+				FAF34FE31C813580009A4E34 /* ssl23.h */,
+				FAF34FE41C813580009A4E34 /* ssl3.h */,
+				FAF34FE51C813580009A4E34 /* stack.h */,
+				FAF34FE61C813580009A4E34 /* symhacks.h */,
+				FAF34FE71C813580009A4E34 /* tls1.h */,
+				FAF34FE81C813580009A4E34 /* ts.h */,
+				FAF34FE91C813580009A4E34 /* txt_db.h */,
+				FAF34FEA1C813580009A4E34 /* ui.h */,
+				FAF34FEB1C813580009A4E34 /* ui_compat.h */,
+				FAF34FEC1C813580009A4E34 /* whrlpool.h */,
+				FAF34FED1C813580009A4E34 /* x509.h */,
+				FAF34FEE1C813580009A4E34 /* x509_vfy.h */,
+				FAF34FEF1C813580009A4E34 /* x509v3.h */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		FAF34FF01C813580009A4E34 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FF11C813580009A4E34 /* libcrypto.a */,
+				FAF34FF21C813580009A4E34 /* libssl.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		FAF34FF51C8135B9009A4E34 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FF61C8135B9009A4E34 /* core */,
+				FAF34FFD1C8135B9009A4E34 /* intf */,
+				FA9FF1E01C83F50900FC81B4 /* http */,
+				FAF350001C8135B9009A4E34 /* ping */,
+				FAF3500C1C8135B9009A4E34 /* utils */,
+				FAF350051C8135B9009A4E34 /* SCCSR.h */,
+				FAF350061C8135B9009A4E34 /* SCCSR.m */,
+				FAF350071C8135B9009A4E34 /* SeaCat.h */,
+				FAF350081C8135B9009A4E34 /* SeaCat.m */,
+				FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */,
+				FAF3500B1C8135B9009A4E34 /* spdy.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FAF34FF61C8135B9009A4E34 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FF71C8135B9009A4E34 /* SCFrame.h */,
+				FAF34FF81C8135B9009A4E34 /* SCFrame.m */,
+				FAF34FF91C8135B9009A4E34 /* SCFramePool.h */,
+				FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */,
+				FAF34FFB1C8135B9009A4E34 /* SCReactor.h */,
+				FAF34FFC1C8135B9009A4E34 /* SCReactor.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		FAF34FFD1C8135B9009A4E34 /* intf */ = {
+			isa = PBXGroup;
+			children = (
+				FAF34FFE1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h */,
+				FAF34FFF1C8135B9009A4E34 /* SCFrameProviderProtocol.h */,
+			);
+			path = intf;
+			sourceTree = "<group>";
+		};
+		FAF350001C8135B9009A4E34 /* ping */ = {
+			isa = PBXGroup;
+			children = (
+				FAF350011C8135B9009A4E34 /* SCPing.h */,
+				FAF350021C8135B9009A4E34 /* SCPing.m */,
+				FAF350031C8135B9009A4E34 /* SCPingFactory.h */,
+				FAF350041C8135B9009A4E34 /* SCPingFactory.m */,
+			);
+			path = ping;
+			sourceTree = "<group>";
+		};
+		FAF3500C1C8135B9009A4E34 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAF3500D1C8135B9009A4E34 /* Logging.m */,
+				FAF3500E1C8135B9009A4E34 /* Errors.m */,
+				FA9FF1ED1C84115900FC81B4 /* Notifications.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		FAF350711C8137C5009A4E34 /* iOSDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				FAF350751C8137C5009A4E34 /* AppDelegate.h */,
+				FAF350761C8137C5009A4E34 /* AppDelegate.m */,
+				FAF350781C8137C5009A4E34 /* ViewController.h */,
+				FAF350791C8137C5009A4E34 /* ViewController.m */,
+				FA9FF1EA1C83FAF800FC81B4 /* SplashViewController.h */,
+				FA9FF1EB1C83FAF800FC81B4 /* SplashViewController.m */,
+				FAF3507B1C8137C5009A4E34 /* Main.storyboard */,
+				FAF3507E1C8137C5009A4E34 /* Assets.xcassets */,
+				FAF350801C8137C5009A4E34 /* LaunchScreen.storyboard */,
+				FAF350831C8137C5009A4E34 /* Info.plist */,
+				FAF350721C8137C5009A4E34 /* Supporting Files */,
+			);
+			path = iOSDemoApp;
+			sourceTree = "<group>";
+		};
+		FAF350721C8137C5009A4E34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF350731C8137C5009A4E34 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF350911C813A92009A4E34 /* tvOSDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				FAF350951C813A93009A4E34 /* AppDelegate.h */,
+				FAF350961C813A93009A4E34 /* AppDelegate.m */,
+				FAF350981C813A93009A4E34 /* ViewController.h */,
+				FAF350991C813A93009A4E34 /* ViewController.m */,
+				FAF3509B1C813A93009A4E34 /* Main.storyboard */,
+				FAF3509E1C813A93009A4E34 /* Assets.xcassets */,
+				FAF350A01C813A93009A4E34 /* Info.plist */,
+				FAF350921C813A92009A4E34 /* Supporting Files */,
+			);
+			path = tvOSDemoApp;
+			sourceTree = "<group>";
+		};
+		FAF350921C813A92009A4E34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF350931C813A92009A4E34 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FAF34F6E1C8134BC009A4E34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF34F741C8134BC009A4E34 /* SeaCatiOSClient.h in Headers */,
+				FAF350571C8135B9009A4E34 /* spdy.h in Headers */,
+				FAF350471C8135B9009A4E34 /* SeaCat.h in Headers */,
+				FA9FF1F31C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,
+				FAF3503F1C8135B9009A4E34 /* SCCSR.h in Headers */,
+				FAF3500F1C8135B9009A4E34 /* SCFrame.h in Headers */,
+				FAF350371C8135B9009A4E34 /* SCPingFactory.h in Headers */,
+				FA9FF1E31C83F50900FC81B4 /* SCURLProtocol.h in Headers */,
+				FAF350531C8135B9009A4E34 /* SeaCatInternals.h in Headers */,
+				FAF3502F1C8135B9009A4E34 /* SCPing.h in Headers */,
+				FAF350271C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h in Headers */,
+				FAF350171C8135B9009A4E34 /* SCFramePool.h in Headers */,
+				FAF3501F1C8135B9009A4E34 /* SCReactor.h in Headers */,
+				FAF3502B1C8135B9009A4E34 /* SCFrameProviderProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F7B1C8134DC009A4E34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF34F811C8134DC009A4E34 /* SeaCattvOSClient.h in Headers */,
+				FAF350481C8135B9009A4E34 /* SeaCat.h in Headers */,
+				FAF350581C8135B9009A4E34 /* spdy.h in Headers */,
+				FA9FF1F41C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,
+				FAF350401C8135B9009A4E34 /* SCCSR.h in Headers */,
+				FAF350101C8135B9009A4E34 /* SCFrame.h in Headers */,
+				FAF350381C8135B9009A4E34 /* SCPingFactory.h in Headers */,
+				FA9FF1E41C83F50900FC81B4 /* SCURLProtocol.h in Headers */,
+				FAF350541C8135B9009A4E34 /* SeaCatInternals.h in Headers */,
+				FAF350301C8135B9009A4E34 /* SCPing.h in Headers */,
+				FAF350281C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h in Headers */,
+				FAF350181C8135B9009A4E34 /* SCFramePool.h in Headers */,
+				FAF350201C8135B9009A4E34 /* SCReactor.h in Headers */,
+				FAF3502C1C8135B9009A4E34 /* SCFrameProviderProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F951C813522009A4E34 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF34F9B1C813522009A4E34 /* SeaCatOSCClient.h in Headers */,
+				FAF3505A1C8135B9009A4E34 /* spdy.h in Headers */,
+				FAF350421C8135B9009A4E34 /* SCCSR.h in Headers */,
+				FA9FF1F51C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,
+				FAF3504A1C8135B9009A4E34 /* SeaCat.h in Headers */,
+				FAF350121C8135B9009A4E34 /* SCFrame.h in Headers */,
+				FAF3503A1C8135B9009A4E34 /* SCPingFactory.h in Headers */,
+				FA9FF1E51C83F50900FC81B4 /* SCURLProtocol.h in Headers */,
+				FAF350561C8135B9009A4E34 /* SeaCatInternals.h in Headers */,
+				FAF350321C8135B9009A4E34 /* SCPing.h in Headers */,
+				FAF3502A1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h in Headers */,
+				FAF3501A1C8135B9009A4E34 /* SCFramePool.h in Headers */,
+				FAF350221C8135B9009A4E34 /* SCReactor.h in Headers */,
+				FAF3502E1C8135B9009A4E34 /* SCFrameProviderProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FAF34F701C8134BC009A4E34 /* SeaCatiOSClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF34F761C8134BC009A4E34 /* Build configuration list for PBXNativeTarget "SeaCatiOSClient" */;
+			buildPhases = (
+				FAF34F6C1C8134BC009A4E34 /* Sources */,
+				FAF34F6D1C8134BC009A4E34 /* Frameworks */,
+				FAF34F6E1C8134BC009A4E34 /* Headers */,
+				FAF34F6F1C8134BC009A4E34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeaCatiOSClient;
+			productName = SeaCatiOSClient;
+			productReference = FAF34F711C8134BC009A4E34 /* SeaCatiOSClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAF34F7D1C8134DC009A4E34 /* SeaCattvOSClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF34F831C8134DC009A4E34 /* Build configuration list for PBXNativeTarget "SeaCattvOSClient" */;
+			buildPhases = (
+				FAF34F791C8134DC009A4E34 /* Sources */,
+				FAF34F7A1C8134DC009A4E34 /* Frameworks */,
+				FAF34F7B1C8134DC009A4E34 /* Headers */,
+				FAF34F7C1C8134DC009A4E34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeaCattvOSClient;
+			productName = SeaCattvOSClient;
+			productReference = FAF34F7E1C8134DC009A4E34 /* SeaCattvOSClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAF34F971C813522009A4E34 /* SeaCatOSCClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF34F9D1C813522009A4E34 /* Build configuration list for PBXNativeTarget "SeaCatOSCClient" */;
+			buildPhases = (
+				FAF34F931C813522009A4E34 /* Sources */,
+				FAF34F941C813522009A4E34 /* Frameworks */,
+				FAF34F951C813522009A4E34 /* Headers */,
+				FAF34F961C813522009A4E34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeaCatOSCClient;
+			productName = SeaCatOSCClient;
+			productReference = FAF34F981C813522009A4E34 /* SeaCatOSCClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAF3506F1C8137C5009A4E34 /* iOSDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF350841C8137C5009A4E34 /* Build configuration list for PBXNativeTarget "iOSDemoApp" */;
+			buildPhases = (
+				FAF3506C1C8137C5009A4E34 /* Sources */,
+				FAF3506D1C8137C5009A4E34 /* Frameworks */,
+				FAF3506E1C8137C5009A4E34 /* Resources */,
+				FAF3508B1C8137D7009A4E34 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF3508A1C8137D7009A4E34 /* PBXTargetDependency */,
+			);
+			name = iOSDemoApp;
+			productName = iOSDemoApp;
+			productReference = FAF350701C8137C5009A4E34 /* iOSDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAF3508F1C813A92009A4E34 /* tvOSDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF350A11C813A93009A4E34 /* Build configuration list for PBXNativeTarget "tvOSDemoApp" */;
+			buildPhases = (
+				FAF3508C1C813A92009A4E34 /* Sources */,
+				FAF3508D1C813A92009A4E34 /* Frameworks */,
+				FAF3508E1C813A92009A4E34 /* Resources */,
+				FAF350A81C813AA4009A4E34 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF350A71C813AA4009A4E34 /* PBXTargetDependency */,
+			);
+			name = tvOSDemoApp;
+			productName = tvOSDemoApp;
+			productReference = FAF350901C813A92009A4E34 /* tvOSDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAF34F581C81334B009A4E34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					FAF34F701C8134BC009A4E34 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					FAF34F7D1C8134DC009A4E34 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					FAF34F971C813522009A4E34 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					FAF3506F1C8137C5009A4E34 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					FAF3508F1C813A92009A4E34 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FAF34F5B1C81334B009A4E34 /* Build configuration list for PBXProject "SeaCatClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAF34F571C81334B009A4E34;
+			productRefGroup = FAF34F641C8133E4009A4E34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAF34F701C8134BC009A4E34 /* SeaCatiOSClient */,
+				FAF3506F1C8137C5009A4E34 /* iOSDemoApp */,
+				FAF34F7D1C8134DC009A4E34 /* SeaCattvOSClient */,
+				FAF3508F1C813A92009A4E34 /* tvOSDemoApp */,
+				FAF34F971C813522009A4E34 /* SeaCatOSCClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAF34F6F1C8134BC009A4E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F7C1C8134DC009A4E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F961C813522009A4E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF3506E1C8137C5009A4E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350821C8137C5009A4E34 /* LaunchScreen.storyboard in Resources */,
+				FAF3507F1C8137C5009A4E34 /* Assets.xcassets in Resources */,
+				FAF3507D1C8137C5009A4E34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF3508E1C813A92009A4E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF3509F1C813A93009A4E34 /* Assets.xcassets in Resources */,
+				FAF3509D1C813A93009A4E34 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAF34F6C1C8134BC009A4E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350431C8135B9009A4E34 /* SCCSR.m in Sources */,
+				FAF350131C8135B9009A4E34 /* SCFrame.m in Sources */,
+				FAF3501B1C8135B9009A4E34 /* SCFramePool.m in Sources */,
+				FAF3505F1C8135B9009A4E34 /* Errors.m in Sources */,
+				FAF3505B1C8135B9009A4E34 /* Logging.m in Sources */,
+				FAF3503B1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
+				FA9FF1EE1C84115900FC81B4 /* Notifications.m in Sources */,
+				FAF350231C8135B9009A4E34 /* SCReactor.m in Sources */,
+				FAF3504B1C8135B9009A4E34 /* SeaCat.m in Sources */,
+				FAF350331C8135B9009A4E34 /* SCPing.m in Sources */,
+				FA9FF1F61C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
+				FA9FF1E61C83F50900FC81B4 /* SCURLProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F791C8134DC009A4E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350441C8135B9009A4E34 /* SCCSR.m in Sources */,
+				FAF350141C8135B9009A4E34 /* SCFrame.m in Sources */,
+				FAF3501C1C8135B9009A4E34 /* SCFramePool.m in Sources */,
+				FAF350601C8135B9009A4E34 /* Errors.m in Sources */,
+				FAF3505C1C8135B9009A4E34 /* Logging.m in Sources */,
+				FAF3503C1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
+				FA9FF1EF1C84115900FC81B4 /* Notifications.m in Sources */,
+				FAF350241C8135B9009A4E34 /* SCReactor.m in Sources */,
+				FAF3504C1C8135B9009A4E34 /* SeaCat.m in Sources */,
+				FAF350341C8135B9009A4E34 /* SCPing.m in Sources */,
+				FA9FF1F71C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
+				FA9FF1E71C83F50900FC81B4 /* SCURLProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF34F931C813522009A4E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF350461C8135B9009A4E34 /* SCCSR.m in Sources */,
+				FAF350161C8135B9009A4E34 /* SCFrame.m in Sources */,
+				FAF3501E1C8135B9009A4E34 /* SCFramePool.m in Sources */,
+				FAF350621C8135B9009A4E34 /* Errors.m in Sources */,
+				FAF3505E1C8135B9009A4E34 /* Logging.m in Sources */,
+				FAF3503E1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
+				FA9FF1F01C84115900FC81B4 /* Notifications.m in Sources */,
+				FAF350261C8135B9009A4E34 /* SCReactor.m in Sources */,
+				FAF3504E1C8135B9009A4E34 /* SeaCat.m in Sources */,
+				FAF350361C8135B9009A4E34 /* SCPing.m in Sources */,
+				FA9FF1F81C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
+				FA9FF1E81C83F50900FC81B4 /* SCURLProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF3506C1C8137C5009A4E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF3507A1C8137C5009A4E34 /* ViewController.m in Sources */,
+				FAF350771C8137C5009A4E34 /* AppDelegate.m in Sources */,
+				FAF350741C8137C5009A4E34 /* main.m in Sources */,
+				FA9FF1EC1C83FAF800FC81B4 /* SplashViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF3508C1C813A92009A4E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF3509A1C813A93009A4E34 /* ViewController.m in Sources */,
+				FAF350971C813A93009A4E34 /* AppDelegate.m in Sources */,
+				FAF350941C813A92009A4E34 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAF3508A1C8137D7009A4E34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF34F701C8134BC009A4E34 /* SeaCatiOSClient */;
+			targetProxy = FAF350891C8137D7009A4E34 /* PBXContainerItemProxy */;
+		};
+		FAF350A71C813AA4009A4E34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF34F7D1C8134DC009A4E34 /* SeaCattvOSClient */;
+			targetProxy = FAF350A61C813AA4009A4E34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAF3507B1C8137C5009A4E34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF3507C1C8137C5009A4E34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAF350801C8137C5009A4E34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF350811C8137C5009A4E34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAF3509B1C813A93009A4E34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF3509C1C813A93009A4E34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAF34F5C1C81334B009A4E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		FAF34F5D1C81334B009A4E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		FAF34F771C8134BC009A4E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SeaCatiOSClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore-ios/openssl/lib",
+					"$(PROJECT_DIR)/seacat-ccore-ios",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.ios.SeaCatiOSClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAF34F781C8134BC009A4E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SeaCatiOSClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore-ios/openssl/lib",
+					"$(PROJECT_DIR)/seacat-ccore-ios",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.ios.SeaCatiOSClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FAF34F841C8134DC009A4E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SeaCattvOSClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore-tvos/openssl/lib",
+					"$(PROJECT_DIR)/seacat-ccore-tvos",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.tvos.SeaCattvOSClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAF34F851C8134DC009A4E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SeaCattvOSClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore-tvos/openssl/lib",
+					"$(PROJECT_DIR)/seacat-ccore-tvos",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.tvos.SeaCattvOSClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FAF34F9E1C813522009A4E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SeaCatOSCClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore",
+					"$(PROJECT_DIR)/seacat-ccore/openssl/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.tvos.SeaCatOSCClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAF34F9F1C813522009A4E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SeaCatOSCClient/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore",
+					"$(PROJECT_DIR)/seacat-ccore/openssl/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.tvos.SeaCatOSCClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FAF350851C8137C5009A4E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = iOSDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.ios.iOSDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAF350861C8137C5009A4E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = iOSDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.ios.iOSDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAF350A21C813A93009A4E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = tvOSDemoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.tvos.tvOSDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		FAF350A31C813A93009A4E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = tvOSDemoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teskalabs.seacat.tvos.tvOSDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAF34F5B1C81334B009A4E34 /* Build configuration list for PBXProject "SeaCatClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF34F5C1C81334B009A4E34 /* Debug */,
+				FAF34F5D1C81334B009A4E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF34F761C8134BC009A4E34 /* Build configuration list for PBXNativeTarget "SeaCatiOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF34F771C8134BC009A4E34 /* Debug */,
+				FAF34F781C8134BC009A4E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF34F831C8134DC009A4E34 /* Build configuration list for PBXNativeTarget "SeaCattvOSClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF34F841C8134DC009A4E34 /* Debug */,
+				FAF34F851C8134DC009A4E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF34F9D1C813522009A4E34 /* Build configuration list for PBXNativeTarget "SeaCatOSCClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF34F9E1C813522009A4E34 /* Debug */,
+				FAF34F9F1C813522009A4E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF350841C8137C5009A4E34 /* Build configuration list for PBXNativeTarget "iOSDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF350851C8137C5009A4E34 /* Debug */,
+				FAF350861C8137C5009A4E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF350A11C813A93009A4E34 /* Build configuration list for PBXNativeTarget "tvOSDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF350A21C813A93009A4E34 /* Debug */,
+				FAF350A31C813A93009A4E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAF34F581C81334B009A4E34 /* Project object */;
+}
