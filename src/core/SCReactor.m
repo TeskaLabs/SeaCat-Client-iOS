@@ -89,7 +89,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	// Construct var dir
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
 	NSMutableString *varDir = [[paths objectAtIndex:0] mutableCopy];
-	[varDir appendString:@"/seacat"];
+	[varDir appendString:@"/.seacat"];
 
     
     int rc;
