@@ -47,6 +47,8 @@ static void _SCLogFnct(char level, const char * message)
     }
 
     [SeaCatReactor start];
+
+    [SeaCatPlugin commitCharacteristics];
     
     // Register HTTP protocol class
     [NSURLProtocol registerClass:[SCURLProtocol class]];

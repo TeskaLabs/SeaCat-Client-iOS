@@ -11,6 +11,7 @@
 #include "seacatcc.h"
 
 #import "SeaCat.h"
+#import "SeaCatPlugin.h"
 #import "SCReactor.h"
 #import "SCFramePool.h"
 #import "SCCSR.h"
