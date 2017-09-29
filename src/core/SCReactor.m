@@ -39,7 +39,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 @implementation SCReactor
 {
     bool started;
-
+    
     SCFrame * readFrame;
     SCFrame * writeFrame;
 
@@ -51,7 +51,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 @synthesize pingFactory;
 @synthesize framePool;
 
--(SCReactor *)init
+-(SCReactor *)init:(NSString *)appId
 {
 	NSError * error;
 	
@@ -79,13 +79,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
     
     seacatcc_hook_register('S', hook_state_changed);
     
-    
-    // Get application id
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSDictionary *info = [bundle infoDictionary];
-    NSString * ApplicationId = [info objectForKey:(NSString*)kCFBundleIdentifierKey];
 
-	
 	// Construct var dir
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
 	NSMutableString *varDir = [[paths objectAtIndex:0] mutableCopy];
@@ -94,7 +88,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
     
     int rc;
     rc = seacatcc_init(
-		[ApplicationId UTF8String],
+		[appId UTF8String],
 		NULL, //TODO: Application Id suffix
 #if TARGET_OS_IOS
         "ios",

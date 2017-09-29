@@ -18,6 +18,8 @@
 @property (readonly) SCPingFactory * pingFactory;
 @property (readonly) SCFramePool * framePool;
 
+-(SCReactor *)init:(NSString *)appId;
+
 -(void)start;
 
 -(void)registerFrameProvider:(id<SCFrameProviderProtocol>)provider single:(bool)single;

@@ -30,6 +30,8 @@
 + (void)reset;
 + (void)renew;
 
++ (void)setApplicationId:(NSString*)appId;
+
 // NSNotificationCenter part
 + (void)addObserver:(id)observer selector:(SEL)aSelector name:(NSString *)aName;
 + (id <NSObject>)addObserverForName:(NSString *)name queue:(NSOperationQueue *)queue usingBlock:(void (^)(NSNotification *note))block NS_AVAILABLE(10_6, 4_0);

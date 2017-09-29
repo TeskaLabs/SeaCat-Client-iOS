@@ -14,19 +14,17 @@ static void _SCLogFnct(char level, const char * message)
     _SCLog(level, [NSString stringWithUTF8String:message]);
 }
 
+static NSString * SeaCatApplicationId = nil;
+
 @implementation SeaCat
 
+// This method is called automatically after the Sea is loaded into a memory
 + (void)load
 {
-    if(SeaCatReactor == NULL)
-    {
-        // Configure logging
-        seacatcc_log_setfnct(_SCLogFnct);
-
-        // Create reactor
-        SeaCatReactor = [SCReactor new];
-    }
+    // Configure logging
+    seacatcc_log_setfnct(_SCLogFnct);
 }
+
 
 + (BOOL)_reactorReady
 {
@@ -38,12 +36,20 @@ static void _SCLogFnct(char level, const char * message)
     return TRUE;
 }
 
+
 + (void)configure
 {
     if (SeaCatReactor == NULL)
     {
-        SCLOG_FATAL(@"SeaCat initialization failed.");
-        return;
+        if (SeaCatApplicationId == nil)
+        {
+            NSBundle *bundle = [NSBundle mainBundle];
+            NSDictionary *info = [bundle infoDictionary];
+            SeaCatApplicationId = [info objectForKey:(NSString*)kCFBundleIdentifierKey];
+        }
+
+        // Create reactor
+        SeaCatReactor = [[SCReactor alloc] init:SeaCatApplicationId];
     }
 
     [SeaCatReactor start];
@@ -111,6 +117,10 @@ static void _SCLogFnct(char level, const char * message)
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 }
 
++ (void)setApplicationId:(NSString*)appId
+{
+    SeaCatApplicationId = appId;
+}
 
 + (void)addObserver:(id)observer selector:(SEL)aSelector name:(NSString *)aName
 {
