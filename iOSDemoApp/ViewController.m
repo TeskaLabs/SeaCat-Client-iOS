@@ -33,19 +33,19 @@
 {
     [super viewDidAppear:animated];
     
-    if (![SeaCat isReady])
+    if (![SeaCatClient isReady])
     {
         [self performSegueWithIdentifier:@"SeaCatSpashSeque" sender:self];
         return;
     }
 
     taskTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(onTaskTimer) userInfo:nil repeats:YES];
-    [SeaCat addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
+    [SeaCatClient addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [SeaCat removeObserver:self];
+    [SeaCatClient removeObserver:self];
 
     [taskTimer invalidate];
     taskTimer = nil;
@@ -58,7 +58,7 @@
 -(void)onTaskTimer
 {
     [self onStateChanged];
-    [SeaCat ping:self];
+    [SeaCatClient ping:self];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self taskURLRequest_GET];
@@ -68,7 +68,7 @@
 - (void)onStateChanged
 {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        _stateLabel.text = [SeaCat getState];
+        _stateLabel.text = [SeaCatClient getState];
     }];
 }
 

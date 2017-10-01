@@ -35,7 +35,7 @@
 		FA9FF1F61C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
 		FA9FF1F71C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
 		FA9FF1F81C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
-		FAF34F741C8134BC009A4E34 /* SeaCatiOSClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F731C8134BC009A4E34 /* SeaCatiOSClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF34F741C8134BC009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F731C8134BC009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAF34F811C8134DC009A4E34 /* SeaCattvOSClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F801C8134DC009A4E34 /* SeaCattvOSClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAF34F9B1C813522009A4E34 /* SeaCatOSCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAF3500F1C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
@@ -80,12 +80,12 @@
 		FAF350431C8135B9009A4E34 /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
 		FAF350441C8135B9009A4E34 /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
 		FAF350461C8135B9009A4E34 /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
-		FAF350471C8135B9009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAF350481C8135B9009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAF3504A1C8135B9009A4E34 /* SeaCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAF3504B1C8135B9009A4E34 /* SeaCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCat.m */; };
-		FAF3504C1C8135B9009A4E34 /* SeaCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCat.m */; };
-		FAF3504E1C8135B9009A4E34 /* SeaCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCat.m */; };
+		FAF350471C8135B9009A4E34 /* SeaCatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF350481C8135B9009A4E34 /* SeaCatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF3504A1C8135B9009A4E34 /* SeaCatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF3504B1C8135B9009A4E34 /* SeaCatClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCatClient.m */; };
+		FAF3504C1C8135B9009A4E34 /* SeaCatClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCatClient.m */; };
+		FAF3504E1C8135B9009A4E34 /* SeaCatClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCatClient.m */; };
 		FAF350531C8135B9009A4E34 /* SeaCatInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */; };
 		FAF350541C8135B9009A4E34 /* SeaCatInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */; };
 		FAF350561C8135B9009A4E34 /* SeaCatInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */; };
@@ -251,7 +251,7 @@
 		FA9FF1F11C842C5A00FC81B4 /* SCCanonicalRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCanonicalRequest.h; sourceTree = "<group>"; };
 		FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCanonicalRequest.m; sourceTree = "<group>"; };
 		FAF34F711C8134BC009A4E34 /* SeaCatiOSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaCatiOSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAF34F731C8134BC009A4E34 /* SeaCatiOSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatiOSClient.h; sourceTree = "<group>"; };
+		FAF34F731C8134BC009A4E34 /* SeaCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCat.h; sourceTree = "<group>"; };
 		FAF34F751C8134BC009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF34F7E1C8134DC009A4E34 /* SeaCattvOSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaCattvOSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF34F801C8134DC009A4E34 /* SeaCattvOSClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCattvOSClient.h; sourceTree = "<group>"; };
@@ -353,8 +353,8 @@
 		FAF350041C8135B9009A4E34 /* SCPingFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPingFactory.m; sourceTree = "<group>"; };
 		FAF350051C8135B9009A4E34 /* SCCSR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCSR.h; sourceTree = "<group>"; };
 		FAF350061C8135B9009A4E34 /* SCCSR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCSR.m; sourceTree = "<group>"; };
-		FAF350071C8135B9009A4E34 /* SeaCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeaCat.h; sourceTree = "<group>"; };
-		FAF350081C8135B9009A4E34 /* SeaCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeaCat.m; sourceTree = "<group>"; };
+		FAF350071C8135B9009A4E34 /* SeaCatClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeaCatClient.h; sourceTree = "<group>"; };
+		FAF350081C8135B9009A4E34 /* SeaCatClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeaCatClient.m; sourceTree = "<group>"; };
 		FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeaCatInternals.h; sourceTree = "<group>"; };
 		FAF3500B1C8135B9009A4E34 /* spdy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spdy.h; sourceTree = "<group>"; };
 		FAF3500D1C8135B9009A4E34 /* Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logging.m; sourceTree = "<group>"; };
@@ -590,7 +590,7 @@
 		FAF34F721C8134BC009A4E34 /* SeaCatiOSClient */ = {
 			isa = PBXGroup;
 			children = (
-				FAF34F731C8134BC009A4E34 /* SeaCatiOSClient.h */,
+				FAF34F731C8134BC009A4E34 /* SeaCat.h */,
 				FAF34F751C8134BC009A4E34 /* Info.plist */,
 			);
 			path = SeaCatiOSClient;
@@ -743,8 +743,8 @@
 				FAF3500C1C8135B9009A4E34 /* utils */,
 				FAF350051C8135B9009A4E34 /* SCCSR.h */,
 				FAF350061C8135B9009A4E34 /* SCCSR.m */,
-				FAF350071C8135B9009A4E34 /* SeaCat.h */,
-				FAF350081C8135B9009A4E34 /* SeaCat.m */,
+				FAF350071C8135B9009A4E34 /* SeaCatClient.h */,
+				FAF350081C8135B9009A4E34 /* SeaCatClient.m */,
 				FAF3500A1C8135B9009A4E34 /* SeaCatInternals.h */,
 				DB71D7411F7A765300503F80 /* SeaCatPlugin.h */,
 				DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */,
@@ -852,9 +852,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF34F741C8134BC009A4E34 /* SeaCatiOSClient.h in Headers */,
+				FAF34F741C8134BC009A4E34 /* SeaCat.h in Headers */,
 				FAF350571C8135B9009A4E34 /* spdy.h in Headers */,
-				FAF350471C8135B9009A4E34 /* SeaCat.h in Headers */,
+				FAF350471C8135B9009A4E34 /* SeaCatClient.h in Headers */,
 				FA9FF1F31C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,
 				FAF3503F1C8135B9009A4E34 /* SCCSR.h in Headers */,
 				FAF3500F1C8135B9009A4E34 /* SCFrame.h in Headers */,
@@ -875,7 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF34F811C8134DC009A4E34 /* SeaCattvOSClient.h in Headers */,
-				FAF350481C8135B9009A4E34 /* SeaCat.h in Headers */,
+				FAF350481C8135B9009A4E34 /* SeaCatClient.h in Headers */,
 				FAF350581C8135B9009A4E34 /* spdy.h in Headers */,
 				FA9FF1F41C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,
 				FAF350401C8135B9009A4E34 /* SCCSR.h in Headers */,
@@ -900,7 +900,7 @@
 				FAF3505A1C8135B9009A4E34 /* spdy.h in Headers */,
 				FAF350421C8135B9009A4E34 /* SCCSR.h in Headers */,
 				FA9FF1F51C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,
-				FAF3504A1C8135B9009A4E34 /* SeaCat.h in Headers */,
+				FAF3504A1C8135B9009A4E34 /* SeaCatClient.h in Headers */,
 				FAF350121C8135B9009A4E34 /* SCFrame.h in Headers */,
 				FAF3503A1C8135B9009A4E34 /* SCPingFactory.h in Headers */,
 				FA9FF1E51C83F50900FC81B4 /* SCURLProtocol.h in Headers */,
@@ -1112,7 +1112,7 @@
 				FAF3503B1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
 				FA9FF1EE1C84115900FC81B4 /* Notifications.m in Sources */,
 				FAF350231C8135B9009A4E34 /* SCReactor.m in Sources */,
-				FAF3504B1C8135B9009A4E34 /* SeaCat.m in Sources */,
+				FAF3504B1C8135B9009A4E34 /* SeaCatClient.m in Sources */,
 				DB71D73E1F7A762F00503F80 /* SeaCatPlugin.m in Sources */,
 				FAF350331C8135B9009A4E34 /* SCPing.m in Sources */,
 				FA9FF1F61C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
@@ -1132,7 +1132,7 @@
 				FAF3503C1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
 				FA9FF1EF1C84115900FC81B4 /* Notifications.m in Sources */,
 				FAF350241C8135B9009A4E34 /* SCReactor.m in Sources */,
-				FAF3504C1C8135B9009A4E34 /* SeaCat.m in Sources */,
+				FAF3504C1C8135B9009A4E34 /* SeaCatClient.m in Sources */,
 				DB71D73F1F7A762F00503F80 /* SeaCatPlugin.m in Sources */,
 				FAF350341C8135B9009A4E34 /* SCPing.m in Sources */,
 				FA9FF1F71C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
@@ -1152,7 +1152,7 @@
 				FAF3503E1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
 				FA9FF1F01C84115900FC81B4 /* Notifications.m in Sources */,
 				FAF350261C8135B9009A4E34 /* SCReactor.m in Sources */,
-				FAF3504E1C8135B9009A4E34 /* SeaCat.m in Sources */,
+				FAF3504E1C8135B9009A4E34 /* SeaCatClient.m in Sources */,
 				DB71D7401F7A762F00503F80 /* SeaCatPlugin.m in Sources */,
 				FAF350361C8135B9009A4E34 /* SCPing.m in Sources */,
 				FA9FF1F81C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,

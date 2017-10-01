@@ -17,7 +17,7 @@
 @end
 
 
-@interface SeaCat : NSObject
+@interface SeaCatClient : NSObject
 
 + (void)configure;
 

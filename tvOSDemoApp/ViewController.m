@@ -26,7 +26,7 @@
 
 -(void)onTaskTimer
 {
-    [SeaCat ping:self];
+    [SeaCatClient ping:self];
 }
 
 -(void)pong:(int32_t)pingId;

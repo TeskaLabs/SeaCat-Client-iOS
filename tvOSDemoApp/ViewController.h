@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SeaCatiOSClient/SeaCat.h"
+#import "SeaCatiOSClient/SeaCatClient.h"
 
 @interface ViewController : UIViewController <SeaCatPingDelegate>;
 @property (weak, nonatomic) IBOutlet UILabel *pingLabel;

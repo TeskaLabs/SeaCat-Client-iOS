@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SeaCat.h"
+#import "SeaCatClient.h"
 #import "SCFrameProviderProtocol.h"
 #import "SCCntlFrameConsumerProtocol.h"
 

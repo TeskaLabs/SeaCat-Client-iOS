@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SeaCatiOSClient/SeaCat.h"
+#import "SeaCatiOSClient/SeaCatClient.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [SeaCat configure];
+    [SeaCatClient configure];
     
     return YES;
 }

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SeaCat.h"
+#import "SeaCatClient.h"
 
 @interface SCPing : NSObject
 

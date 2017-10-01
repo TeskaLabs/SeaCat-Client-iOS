@@ -7,7 +7,7 @@
 //
 
 #import "SplashViewController.h"
-#import "SeaCatiOSClient/SeaCat.h"
+#import "SeaCatiOSClient/SeaCatClient.h"
 
 @interface SplashViewController ()
 
@@ -27,7 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if ([SeaCat isReady]) [self dismissViewControllerAnimated:YES completion:nil];
+    if ([SeaCatClient isReady]) [self dismissViewControllerAnimated:YES completion:nil];
     [super viewWillAppear:animated];
 }
 
@@ -35,14 +35,14 @@
 {
     [super viewDidAppear:animated];
 
-    [SeaCat addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
+    [SeaCatClient addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
     periodicTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(onStateChanged) userInfo:nil repeats:YES];
     [self onStateChanged];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [SeaCat removeObserver:self];
+    [SeaCatClient removeObserver:self];
 
     [periodicTimer invalidate];
     periodicTimer = nil;
@@ -55,11 +55,11 @@
 - (void)onStateChanged
 {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        NSString * state = [SeaCat getState];
+        NSString * state = [SeaCatClient getState];
         [_stateItem setTitle:state];
         
         // SeaCat is ready
-        if ([SeaCat isReady]) [self dismissViewControllerAnimated:YES completion:nil];
+        if ([SeaCatClient isReady]) [self dismissViewControllerAnimated:YES completion:nil];
     }];
 }
 
@@ -78,7 +78,7 @@
         style:UIAlertActionStyleDestructive
         handler:^(UIAlertAction * action)
         {
-            [SeaCat reset];
+            [SeaCatClient reset];
             [myAlertController dismissViewControllerAnimated:YES completion:nil];
         }
     ];

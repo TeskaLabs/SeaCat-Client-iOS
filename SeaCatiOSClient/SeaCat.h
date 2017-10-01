@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double SeaCatiOSClientVersionNumber;
 //! Project version string for SeaCatiOSClient.
 FOUNDATION_EXPORT const unsigned char SeaCatiOSClientVersionString[];
 
-#import "SeaCat.h"
+#import "SeaCatClient.h"
 #import "SCCSR.h"

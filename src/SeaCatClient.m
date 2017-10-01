@@ -16,7 +16,7 @@ static void _SCLogFnct(char level, const char * message)
 
 static NSString * SeaCatApplicationId = nil;
 
-@implementation SeaCat
+@implementation SeaCatClient
 
 // This method is called automatically after the Sea is loaded into a memory
 + (void)load
