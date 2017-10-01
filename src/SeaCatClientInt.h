@@ -36,6 +36,7 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 
 + (void)setLogMask:(SCLogFlag)mask;
 
++ (void)connect;
 + (void)disconnect;
 + (void)reset;
 + (void)renew;

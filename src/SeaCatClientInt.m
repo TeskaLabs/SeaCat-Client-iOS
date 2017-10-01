@@ -109,6 +109,14 @@ static NSString * SeaCatApplicationId = nil;
 
 }
 
++ (void)connect
+{
+    if (![self _reactorReady]) return;
+    
+    int rc = seacatcc_yield('c');
+    NSError * error = SCCheckRC(rc, @"seacatcc_yield/connect");
+    if (error != NULL) SCLOG_ERROR(@"%@", error);
+}
 
 + (void)disconnect
 {
