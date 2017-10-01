@@ -17,4 +17,4 @@ FOUNDATION_EXPORT const unsigned char SeaCatClientVersionString[];
 
 #import "SeaCatClientInt.h"
 #import "SCCSR.h"
-
+#import "SeaCatPlugin.h"
