@@ -8,6 +8,9 @@
 
 @interface SeaCatPlugin : NSObject
 
+- (instancetype)init;
+- (NSDictionary *)getCharacteristics;
+
 + (void)commitCharacteristics;
 
 @end
