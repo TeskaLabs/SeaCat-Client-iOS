@@ -152,6 +152,14 @@ static NSString * SeaCatApplicationId = nil;
     SeaCatApplicationId = appId;
 }
 
++ (void)configureSocket:(unsigned int)port domain:(int)domain sock_type:(int)sock_type protocol:(int)protocol peerAddress:(NSString *)peerAddress  peerPort:(NSString *)peerPort
+{
+    int rc = seacatcc_socket_configure_worker( port, domain, sock_type, protocol, [peerAddress UTF8String], [peerPort UTF8String]);
+    NSError * error = SCCheckRC(rc, @"seacatcc_socket_configure_worker");
+    if (error != NULL) SCLOG_ERROR(@"%@", error);
+
+}
+
 + (void)addObserver:(id)observer selector:(SEL)aSelector name:(NSString *)aName
 {
     if (![self _reactorReady]) return;

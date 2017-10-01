@@ -43,6 +43,8 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 
 + (void)setApplicationId:(NSString*)appId;
 
++ (void)configureSocket:(unsigned int)port domain:(int)domain sock_type:(int)sock_type protocol:(int)protocol peerAddress:(NSString *)peerAddress  peerPort:(NSString *)peerPort;
+
 // NSNotificationCenter part
 + (void)addObserver:(id)observer selector:(SEL)aSelector name:(NSString *)aName;
 + (id <NSObject>)addObserverForName:(NSString *)name queue:(NSOperationQueue *)queue usingBlock:(void (^)(NSNotification *note))block NS_AVAILABLE(10_6, 4_0);
