@@ -16,6 +16,9 @@
 
 @end
 
+typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
+    SC_LOG_FLAG_DEBUG_GENERIC = (1 << 0), // => 0b00000001
+};
 
 @interface SeaCatClient : NSObject
 
@@ -26,6 +29,8 @@
 
 + (BOOL)isReady;
 + (NSString *)getState;
+
++ (void)setLogMask:(SCLogFlag)mask;
 
 + (void)disconnect;
 + (void)reset;

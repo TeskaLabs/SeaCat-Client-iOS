@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [SeaCatClient setLogMask:SC_LOG_FLAG_DEBUG_GENERIC];
     [SeaCatClient configure];
     
     return YES;

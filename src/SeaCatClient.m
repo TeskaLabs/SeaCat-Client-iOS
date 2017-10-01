@@ -93,6 +93,17 @@ static NSString * SeaCatApplicationId = nil;
 }
 
 
++ (void)setLogMask:(SCLogFlag)mask
+{
+    union seacatcc_log_mask_u rawmask = {.value = mask };
+    
+    int rc = seacatcc_log_set_mask(rawmask);
+    NSError * error = SCCheckRC(rc, @"seacatcc_yield/reset");
+    if (error != NULL) SCLOG_ERROR(@"%@", error);
+
+}
+
+
 + (void)disconnect
 {
     if (![self _reactorReady]) return;
