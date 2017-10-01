@@ -19,6 +19,7 @@
 
 @interface SeaCatClient : NSObject
 
++ (BOOL)isConfigured;
 + (void)configure;
 
 + (void)ping:(id<SeaCatPingDelegate>)pong;

@@ -37,6 +37,11 @@ static NSString * SeaCatApplicationId = nil;
 }
 
 
++ (BOOL)isConfigured;
+{
+    return (SeaCatReactor == NULL) ? NO : YES;
+}
+
 + (void)configure
 {
     if (SeaCatReactor == NULL)
