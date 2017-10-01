@@ -9,11 +9,11 @@
 
 #import <Foundation/Foundation.h>
 
-//! Project version number for SeaCattvOSClient.
-FOUNDATION_EXPORT double SeaCattvOSClientVersionNumber;
+//! Project version number for SeaCatClient.
+FOUNDATION_EXPORT double SeaCatClientVersionNumber;
 
-//! Project version string for SeaCattvOSClient.
-FOUNDATION_EXPORT const unsigned char SeaCattvOSClientVersionString[];
+//! Project version string for SeaCatClient.
+FOUNDATION_EXPORT const unsigned char SeaCatClientVersionString[];
 
 #import "SeaCatClientInt.h"
 #import "SCCSR.h"

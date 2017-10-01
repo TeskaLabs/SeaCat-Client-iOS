@@ -37,7 +37,7 @@
 		FA9FF1F81C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
 		FAF34F741C8134BC009A4E34 /* SeaCatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F731C8134BC009A4E34 /* SeaCatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAF34F811C8134DC009A4E34 /* SeaCatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F801C8134DC009A4E34 /* SeaCatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAF34F9B1C813522009A4E34 /* SeaCatOSCClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF34F9B1C813522009A4E34 /* SeaCatClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34F9A1C813522009A4E34 /* SeaCatClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAF3500F1C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
 		FAF350101C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
 		FAF350121C8135B9009A4E34 /* SCFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF34FF71C8135B9009A4E34 /* SCFrame.h */; };
@@ -257,7 +257,7 @@
 		FAF34F801C8134DC009A4E34 /* SeaCatClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatClient.h; sourceTree = "<group>"; };
 		FAF34F821C8134DC009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF34F981C813522009A4E34 /* SeaCatClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeaCatClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatOSCClient.h; sourceTree = "<group>"; };
+		FAF34F9A1C813522009A4E34 /* SeaCatClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatClient.h; sourceTree = "<group>"; };
 		FAF34F9C1C813522009A4E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF34FA11C813580009A4E34 /* libseacatcc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libseacatcc.a; sourceTree = "<group>"; };
 		FAF34FA51C813580009A4E34 /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
@@ -608,7 +608,7 @@
 		FAF34F991C813522009A4E34 /* SeaCatOSCClient */ = {
 			isa = PBXGroup;
 			children = (
-				FAF34F9A1C813522009A4E34 /* SeaCatOSCClient.h */,
+				FAF34F9A1C813522009A4E34 /* SeaCatClient.h */,
 				FAF34F9C1C813522009A4E34 /* Info.plist */,
 			);
 			path = SeaCatOSCClient;
@@ -896,7 +896,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF34F9B1C813522009A4E34 /* SeaCatOSCClient.h in Headers */,
+				FAF34F9B1C813522009A4E34 /* SeaCatClient.h in Headers */,
 				FAF3505A1C8135B9009A4E34 /* spdy.h in Headers */,
 				FAF350421C8135B9009A4E34 /* SCCSR.h in Headers */,
 				FA9FF1F51C842C5A00FC81B4 /* SCCanonicalRequest.h in Headers */,

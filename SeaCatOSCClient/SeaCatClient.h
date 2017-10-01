@@ -5,14 +5,15 @@
 //  Created by Ales Teska on 26/02/16.
 //
 //
+// This is umbreala header file
 
 #import <Cocoa/Cocoa.h>
 
-//! Project version number for SeaCatOSCClient.
-FOUNDATION_EXPORT double SeaCatOSCClientVersionNumber;
+//! Project version number for SeaCatClient.
+FOUNDATION_EXPORT double SeaCatClientVersionNumber;
 
-//! Project version string for SeaCatOSCClient.
-FOUNDATION_EXPORT const unsigned char SeaCatOSCClientVersionString[];
+//! Project version string for SeaCatClient.
+FOUNDATION_EXPORT const unsigned char SeaCatClientVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SeaCatOSCClient/PublicHeader.h>
 
