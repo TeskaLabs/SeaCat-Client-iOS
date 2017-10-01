@@ -12,11 +12,20 @@
 #import "SCReactor.h"
 #import "SCFramePool.h"
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
 #include <libkern/OSAtomic.h>
+#else
+#include <stdatomic.h>
+#endif
 
 @implementation SCPingFactory
 {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
     volatile int32_t idSequence;
+#else
+    atomic_int idSequence;
+#endif
+
 	NSMutableArray<SCPing *> * outboundPingQueue;
 	NSMutableDictionary<NSNumber *, SCPing *> * waitingPingDict;
 }
@@ -57,8 +66,12 @@
 		*keep = false;
 		return NULL;
 	}
-
-	int32_t pingId = OSAtomicAdd32(2, &idSequence) - 2;
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
+    int32_t pingId = OSAtomicAdd32(2, &idSequence) - 2;
+#else
+    int32_t pingId = atomic_fetch_add(&idSequence, 2);
+#endif
 	[ping setPingId:pingId];
 	[waitingPingDict setObject:ping forKey:[NSNumber numberWithUnsignedInteger:pingId]];
 

@@ -9,7 +9,11 @@
 #import "SeaCatInternals.h"
 #import "SCFramePool.h"
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
 #include <libkern/OSAtomic.h>
+#else
+#include <stdatomic.h>
+#endif
 
 @implementation SCFramePool
 {
@@ -19,7 +23,11 @@
     int32_t highWaterMark;
     uint32_t frameCapacity;
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
     volatile int32_t totalCount;
+#else
+    atomic_uint totalCount;
+#endif
 }
 
 
@@ -34,7 +42,7 @@
     highWaterMark = 40960; //TODO: Read this from configuration
     frameCapacity = 16*1024;
     totalCount = 0;
-    
+
     return self;
 }
 
@@ -68,7 +76,11 @@
     if (totalCount > lowWaterMark)
     {
         [frame clear];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
         OSAtomicDecrement32(&totalCount);
+#else
+        atomic_fetch_sub(&totalCount, 1);
+#endif
 
         // Discard frame
     }
@@ -86,7 +98,14 @@
 -(SCFrame *)createFrame
 {
     SCFrame * frame = [[SCFrame alloc] initWithCapacity:frameCapacity];
-    if (frame != NULL) OSAtomicIncrement32(&totalCount);
+    if (frame != NULL)
+    {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_10_0
+        OSAtomicIncrement32(&totalCount);
+#else
+        atomic_fetch_add(&totalCount, 1);
+#endif
+    }
     return frame;
 }
 
