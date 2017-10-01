@@ -50,6 +50,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 
 @synthesize pingFactory;
 @synthesize framePool;
+@synthesize CSRDelegate;
 
 -(SCReactor *)init:(NSString *)appId
 {
@@ -345,8 +346,7 @@ static void hook_worker_request(char worker)
 
         case 'C':
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                //TODO: Generic / provided CSR Worker ...
-                [SCCSR submitDefault];
+                [[SeaCatReactor CSRDelegate] submit:nil];
 
             });
             //TODO: Emit ACTION_SEACAT_CSR_NEEDED event

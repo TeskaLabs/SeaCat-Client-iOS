@@ -16,6 +16,10 @@
 
 @end
 
+@protocol SeaCatCSRDelegate <NSObject>
+-(bool)submit:(NSError **)out_error;
+@end
+
 typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
     SC_LOG_FLAG_DEBUG_GENERIC = (1 << 0), // => 0b00000001
 };
@@ -24,6 +28,7 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 
 + (BOOL)isConfigured;
 + (void)configure;
++ (void)configureWithCSRDelegate:(id<SeaCatCSRDelegate>)CSRDelegate;
 
 + (void)ping:(id<SeaCatPingDelegate>)pong;
 

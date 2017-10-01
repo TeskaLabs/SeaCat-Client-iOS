@@ -44,6 +44,11 @@ static NSString * SeaCatApplicationId = nil;
 
 + (void)configure
 {
+    [self configureWithCSRDelegate:[SCCSR submitDefault]];
+}
+
++ (void)configureWithCSRDelegate:(id<SeaCatCSRDelegate>)CSRDelegate
+{
     if (SeaCatReactor == NULL)
     {
         if (SeaCatApplicationId == nil)
@@ -55,8 +60,9 @@ static NSString * SeaCatApplicationId = nil;
 
         // Create reactor
         SeaCatReactor = [[SCReactor alloc] init:SeaCatApplicationId];
+        SeaCatReactor.CSRDelegate = CSRDelegate;
     }
-
+    
     [SeaCatReactor start];
 
     [SeaCatPlugin commitCharacteristics];
@@ -164,6 +170,5 @@ static NSString * SeaCatApplicationId = nil;
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver:observer name:aName object:SeaCatReactor];
 }
-
 
 @end

@@ -146,16 +146,21 @@
 
 ///
 
-+(bool)submitDefault
++(id<SeaCatCSRDelegate>)submitDefault
 {
-	NSError * error;
-
-    SCCSR * csr = [SCCSR new];
-	[csr setUniqueIdentifier];
-
-	bool ret = [csr submit:&error];
-	if (error != NULL) SCLOG_ERROR(@"CSR submit failed: %@", error);
-	return ret;
+    SCCSRDefaultCSRDelegate * csrDelegate = [[SCCSRDefaultCSRDelegate alloc] init];
+    return csrDelegate;
 }
 
 @end
+
+@implementation SCCSRDefaultCSRDelegate
+
+-(bool)submit:(NSError **)out_error;
+{
+    SCCSR * csr = [[SCCSR alloc] init];
+    return [csr submit:out_error];
+}
+
+@end
+

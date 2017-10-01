@@ -55,7 +55,11 @@
 
 -(bool)submit:(NSError **)error;
 
-+(bool)submitDefault;
++(id<SeaCatCSRDelegate>)submitDefault;
 
 
+@end
+
+@interface SCCSRDefaultCSRDelegate : NSObject <SeaCatCSRDelegate>
+-(bool)submit:(NSError **)out_error;
 @end

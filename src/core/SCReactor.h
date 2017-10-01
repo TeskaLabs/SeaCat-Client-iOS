@@ -17,6 +17,7 @@
 
 @property (readonly) SCPingFactory * pingFactory;
 @property (readonly) SCFramePool * framePool;
+@property (readwrite) id<SeaCatCSRDelegate> CSRDelegate;
 
 -(SCReactor *)init:(NSString *)appId;
 
