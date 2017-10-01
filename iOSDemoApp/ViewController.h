@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SeaCatiOSClient/SeaCatClient.h"
+#import "SeaCatClient/SeaCatClient.h"
 
 @interface ViewController : UIViewController <SeaCatPingDelegate>;
 

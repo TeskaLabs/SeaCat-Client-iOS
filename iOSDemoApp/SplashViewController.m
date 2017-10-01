@@ -7,7 +7,7 @@
 //
 
 #import "SplashViewController.h"
-#import "SeaCatiOSClient/SeaCatClient.h"
+#import "SeaCatClient/SeaCatClient.h"
 
 @interface SplashViewController ()
 

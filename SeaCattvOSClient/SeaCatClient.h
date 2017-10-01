@@ -1,6 +1,6 @@
 //
-//  SeaCattvOSClient.h
-//  SeaCattvOSClient
+//  SeaCatClient.h
+//  SeaCatClient for tvOS
 //
 //  Created by Ales Teska on 26/02/16.
 //
@@ -15,6 +15,6 @@ FOUNDATION_EXPORT double SeaCattvOSClientVersionNumber;
 //! Project version string for SeaCattvOSClient.
 FOUNDATION_EXPORT const unsigned char SeaCattvOSClientVersionString[];
 
-#import "SeaCat.h"
+#import "SeaCatClientInt.h"
 #import "SCCSR.h"
 

@@ -6,7 +6,6 @@
 //  Copyright © 2015 TeskaLabs. All rights reserved.
 //
 
-
 @protocol SeaCatPingDelegate <NSObject>
 
 -(void)pong:(int32_t)pingId;

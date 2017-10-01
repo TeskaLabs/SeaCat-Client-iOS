@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SeaCatiOSClient/SeaCatClient.h"
+#import "SeaCatClient/SeaCatClient.h"
 
 @interface AppDelegate ()
 

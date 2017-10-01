@@ -10,7 +10,7 @@
 
 #include "seacatcc.h"
 
-#import "SeaCatClient.h"
+#import "SeaCatClientInt.h"
 #import "SeaCatPlugin.h"
 #import "SCReactor.h"
 #import "SCFramePool.h"

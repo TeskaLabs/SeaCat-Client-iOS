@@ -1,6 +1,6 @@
 //
-//  SeaCatiOSClient.h
-//  SeaCatiOSClient
+//  SeaCatClient.h
+//  SeaCatClient for iOS
 //
 //  Created by Ales Teska on 26/02/16.
 //
@@ -15,5 +15,6 @@ FOUNDATION_EXPORT double SeaCatiOSClientVersionNumber;
 //! Project version string for SeaCatiOSClient.
 FOUNDATION_EXPORT const unsigned char SeaCatiOSClientVersionString[];
 
-#import "SeaCatClient.h"
+#import "SeaCatClientInt.h"
 #import "SCCSR.h"
+
