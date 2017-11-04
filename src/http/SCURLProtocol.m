@@ -74,7 +74,7 @@ NSString * SeaCatHostSuffix = @".seacat";
         SCLOG_ERROR(@"URL request when not initialized.");
         [[self client]
             URLProtocol:self
-            didFailWithError:SCError(SeaCat_ErrorCore_GENERIC, @"SeaCat URL request started but SeaCat is not ready.")
+            didFailWithError:SeaCatError(SeaCat_ErrorCore_GENERIC, @"SeaCat URL request started but SeaCat is not ready.")
          ];
 
         return; // Report error
@@ -83,7 +83,7 @@ NSString * SeaCatHostSuffix = @".seacat";
     SCLOG_DEBUG(@"SCURLProtocol >> startLoading: %@", self);
     [[self client]
         URLProtocol:self
-        didFailWithError:SCError(SeaCat_ErrorCore_GENERIC, @"startLoading not implemented.")
+        didFailWithError:SeaCatError(SeaCat_ErrorCore_GENERIC, @"startLoading not implemented.")
     ];
 
 }

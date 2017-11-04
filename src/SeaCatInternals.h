@@ -22,8 +22,8 @@
 #import "SCURLProtocol.h"
 
 // Error checking
-NSError * SCCheckRC(int rc, NSString * message);
-NSError * SCError(enum SeaCat_ErrorCodes, NSString * message);
+NSError * SeaCatCheckRC(int rc, NSString * message);
+NSError * SeaCatError(enum SeaCat_ErrorCodes, NSString * message);
 
 // Logging
 void _SCLog(char level, NSString * message);

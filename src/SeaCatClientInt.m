@@ -104,7 +104,7 @@ static NSString * SeaCatApplicationId = nil;
     union seacatcc_log_mask_u rawmask = {.value = mask };
     
     int rc = seacatcc_log_set_mask(rawmask);
-    NSError * error = SCCheckRC(rc, @"seacatcc_yield/reset");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield/reset");
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 
 }
@@ -114,7 +114,7 @@ static NSString * SeaCatApplicationId = nil;
     if (![self _reactorReady]) return;
     
     int rc = seacatcc_yield('c');
-    NSError * error = SCCheckRC(rc, @"seacatcc_yield/connect");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield/connect");
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 }
 
@@ -123,7 +123,7 @@ static NSString * SeaCatApplicationId = nil;
     if (![self _reactorReady]) return;
 
     int rc = seacatcc_yield('d');
-    NSError * error = SCCheckRC(rc, @"seacatcc_yield/disconnect");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield/disconnect");
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 }
 
@@ -133,7 +133,7 @@ static NSString * SeaCatApplicationId = nil;
     if (![self _reactorReady]) return;
 
     int rc = seacatcc_yield('r');
-    NSError * error = SCCheckRC(rc, @"seacatcc_yield/reset");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield/reset");
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 }
 
@@ -143,7 +143,7 @@ static NSString * SeaCatApplicationId = nil;
     if (![self _reactorReady]) return;
 
     int rc = seacatcc_yield('n');
-    NSError * error = SCCheckRC(rc, @"seacatcc_yield/renew");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield/renew");
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 }
 
@@ -155,7 +155,7 @@ static NSString * SeaCatApplicationId = nil;
 + (void)configureSocket:(unsigned int)port domain:(int)domain sock_type:(int)sock_type protocol:(int)protocol peerAddress:(NSString *)peerAddress  peerPort:(NSString *)peerPort
 {
     int rc = seacatcc_socket_configure_worker( port, domain, sock_type, protocol, [peerAddress UTF8String], [peerPort UTF8String]);
-    NSError * error = SCCheckRC(rc, @"seacatcc_socket_configure_worker");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_socket_configure_worker");
     if (error != NULL) SCLOG_ERROR(@"%@", error);
 
 }

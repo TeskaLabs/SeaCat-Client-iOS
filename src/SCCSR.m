@@ -133,7 +133,7 @@
     assert((pos*2+1) == length);
 	
     int rc = seacatcc_csrgen_worker(entries);
-    NSError * error = SCCheckRC(rc, @"seacatcc_csrgen_worker");
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_csrgen_worker");
 	if (error != NULL)
 	{
 		if (out_error != NULL) *out_error = error;

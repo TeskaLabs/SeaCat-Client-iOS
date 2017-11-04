@@ -13,7 +13,7 @@
 NSString * SeaCatErrorDomain = @"SeaCatErrorDomain";
 NSString * SeaCatErrorMessagesTableName = @"SeaCatErrorMessages";
 
-NSError * SCCheckRC(int rc, NSString * message)
+NSError * SeaCatCheckRC(int rc, NSString * message)
 {
 	if (rc == SEACATCC_RC_OK) return NULL; // No error
 
@@ -28,7 +28,7 @@ NSError * SCCheckRC(int rc, NSString * message)
 }
 
 
-NSError * SCError(enum SeaCat_ErrorCodes error_code, NSString * message)
+NSError * SeaCatError(enum SeaCat_ErrorCodes error_code, NSString * message)
 {
     return [NSError
         errorWithDomain: SeaCatErrorDomain

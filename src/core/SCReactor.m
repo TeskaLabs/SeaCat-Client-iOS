@@ -106,7 +106,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
         hook_worker_request,
         hook_evloop_heartbeat
     );
-	error = SCCheckRC(rc, @"seacatcc_init");
+	error = SeaCatCheckRC(rc, @"seacatcc_init");
     if (error != NULL) return NULL;
     
     return self;
@@ -130,7 +130,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 
     int rc;
     rc = seacatcc_run();
-	NSError * error = SCCheckRC(rc, @"seacatcc_run");
+	NSError * error = SeaCatCheckRC(rc, @"seacatcc_run");
 	if (error != NULL) SCLOG_ERROR(@"%@", error);
     
 //    [pool release];
@@ -152,7 +152,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 		rc = SEACATCC_RC_OK;
 	}
 
-	NSError * error = SCCheckRC(rc, @"seacatcc_yield");
+	NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield");
 	if (error != NULL) SCLOG_ERROR(@"%@", error);
 }
 
