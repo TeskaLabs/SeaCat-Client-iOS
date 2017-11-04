@@ -20,5 +20,6 @@
 -(void)ping:(id<SeaCatPingDelegate>)delegate reactor:(SCReactor *)reactor;
 
 -(void)heartBeat:(double)now;
+-(void)reset;
 
 @end

@@ -42,6 +42,18 @@
 	return self;
 }
 
+-(void)reset
+{
+    idSequence = 1;
+
+    for (NSNumber * key in waitingPingDict)
+    {
+        SCPing * ping = [waitingPingDict objectForKey:key];
+        [ping cancel];
+    }
+    [waitingPingDict removeAllObjects];
+
+}
 
 -(void)ping:(id<SeaCatPingDelegate>)delegate reactor:(SCReactor *)reactor
 {
