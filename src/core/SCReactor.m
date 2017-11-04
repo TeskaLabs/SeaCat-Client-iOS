@@ -369,6 +369,11 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
     [self postNotificationName:SeaCat_Notification_GWConnReset];
 }
 
+-(void)onGWConnConnected
+{
+    [self postNotificationName:SeaCat_Notification_GWConnConnected];
+}
+
 @end
 
 /// Hooks
@@ -444,7 +449,5 @@ void hook_gwconn_reset(void)
 void hook_gwconn_connected(void)
 {
     if (SeaCatReactor == NULL) return;
-//    [SeaCatReactor updateState];
+    [SeaCatReactor onGWConnConnected];
 }
-
-

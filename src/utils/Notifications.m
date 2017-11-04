@@ -10,3 +10,4 @@
 
 NSString *const SeaCat_Notification_StateChanged = @"StateChanged";
 NSString *const SeaCat_Notification_GWConnReset = @"GWConnReset";
+NSString *const SeaCat_Notification_GWConnConnected = @"GWConnConnected";
