@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB5AEA231FAD371B003C3E4F /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */; };
 		DB71D73E1F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
 		DB71D73F1F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
 		DB71D7401F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
@@ -165,6 +166,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libresolv.9.tbd; sourceTree = DEVELOPER_DIR; };
 		DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeaCatPlugin.m; sourceTree = "<group>"; };
 		DB71D7411F7A765300503F80 /* SeaCatPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatPlugin.h; sourceTree = "<group>"; };
 		DB8E57D11FACF6AB00D56C07 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5AEA231FAD371B003C3E4F /* libresolv.9.tbd in Frameworks */,
 				FA88B05A1C815B5D00B92F16 /* libcrypto.a in Frameworks */,
 				FA88B05B1C815B6000B92F16 /* libssl.a in Frameworks */,
 				FA88B05C1C815B6200B92F16 /* libseacatcc.a in Frameworks */,
@@ -436,6 +439,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB5AEA211FAD370C003C3E4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA88B05D1C815BB000B92F16 /* seacat-ccore-tvos */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +589,7 @@
 				FAF350911C813A92009A4E34 /* tvOSDemoApp */,
 				FAF34F991C813522009A4E34 /* SeaCatOSCClient */,
 				FAF34F641C8133E4009A4E34 /* Products */,
+				DB5AEA211FAD370C003C3E4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
