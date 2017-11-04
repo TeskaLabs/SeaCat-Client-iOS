@@ -93,9 +93,7 @@ static NSString * SeaCatApplicationId = nil;
 + (NSString *)getState
 {
     if (![self _reactorReady]) return @"??????";
-    char state_buf[SEACATCC_STATE_BUF_SIZE];
-    seacatcc_state(state_buf);
-    return [NSString stringWithUTF8String:state_buf];
+    return SeaCatReactor.lastState;
 }
 
 

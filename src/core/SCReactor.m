@@ -23,6 +23,8 @@ static void hook_frame_return(void *data);
 static void hook_worker_request(char worker);
 static double hook_evloop_heartbeat(double now);
 static void hook_state_changed(void);
+static void hook_gwconn_reset(void);
+static void hook_gwconn_connected(void);
 
 ///
 
@@ -51,9 +53,12 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 @synthesize pingFactory;
 @synthesize framePool;
 @synthesize CSRDelegate;
+@synthesize networkReachability;
+@synthesize lastState;
 
 -(SCReactor *)init:(NSString *)appId
 {
+    int rc;
 	NSError * error;
 	
     self = [super init];
@@ -65,6 +70,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	framePool = [SCFramePool new];
 	readFrame = NULL;
 	writeFrame = NULL;
+    lastState = @"?????";
 
     
 	cntlFrameConsumers = [NSMutableDictionary<NSNumber *, id<SCCntlFrameConsumerProtocol>> new];
@@ -78,16 +84,20 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	];
 
     
-    seacatcc_hook_register('S', hook_state_changed);
-    
+    rc = seacatcc_hook_register('S', hook_state_changed);
+    assert(rc == SEACATCC_RC_OK);
+    rc = seacatcc_hook_register('R', hook_gwconn_reset);
+    assert(rc == SEACATCC_RC_OK);
+    rc = seacatcc_hook_register('c', hook_gwconn_connected);
+    assert(rc == SEACATCC_RC_OK);
 
+    
 	// Construct var dir
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
 	NSMutableString *varDir = [[paths objectAtIndex:0] mutableCopy];
 	[varDir appendString:@"/.seacat"];
 
-    
-    int rc;
+
     rc = seacatcc_init(
 		[appId UTF8String],
 		NULL, //TODO: Application Id suffix
@@ -108,6 +118,11 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
     );
 	error = SeaCatCheckRC(rc, @"seacatcc_init");
     if (error != NULL) return NULL;
+
+    //TODO: Use the gateway address instead of generic reachabilityForInternetConnection
+    self.networkReachability = [Reachability reachabilityForInternetConnection];
+    [self.networkReachability startNotifier];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
     
     return self;
 }
@@ -268,6 +283,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	
 	[pingFactory heartBeat:now];
 	[framePool heartBeat:now];
+    
     return 5.0;
 }
 
@@ -299,12 +315,58 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	return [consumer receivedControlFrame:frame reactor:self frameVersionType:frameVersionType frameLength:frameLength frameFlags:frameFlags];
 }
 
+-(void)updateState
+{
+    char state_buf[SEACATCC_STATE_BUF_SIZE];
+    seacatcc_state(state_buf);
+    lastState = [[NSString alloc] initWithUTF8String:state_buf];
+    [self postNotificationName:SeaCat_Notification_StateChanged];
+}
 
 -(void)postNotificationName:(NSString *)notificationName
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:self];
     });
+}
+
+
+-(void)reachabilityChanged:(NSNotification *)note
+{
+    int rc;
+
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+
+    if (curReach.currentReachabilityStatus == NotReachable)
+    {
+        // Network is not reachable but client is connecting ...
+        char c = [lastState characterAtIndex:0];
+        if ((c == 'E') || (c == 'H') || (c == 'P') || (c == 'p')  || (c == 'C'))
+        {
+            rc = seacatcc_yield('d');
+            NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield");
+            if (error != NULL) SCLOG_ERROR(@"%@", error);
+
+            [self postNotificationName:SeaCat_Notification_GWConnReset];
+        }
+    } else {
+        char c = [lastState characterAtIndex:0];
+        if (c == 'n')
+        {
+            rc = seacatcc_yield('Q');
+            NSError * error = SeaCatCheckRC(rc, @"seacatcc_yield");
+            if (error != NULL) SCLOG_ERROR(@"%@", error);
+        }
+    }
+}
+
+-(void)onGWConnReset
+{
+    [pingFactory reset];
+    //[streamFactory reset];
+
+    [self postNotificationName:SeaCat_Notification_GWConnReset];
 }
 
 @end
@@ -352,6 +414,9 @@ static void hook_worker_request(char worker)
             //TODO: Emit ACTION_SEACAT_CSR_NEEDED event
             break;
             
+        case 'n':
+            break;
+
         default:
             SCLOG_WARN(@"Unknown worker requested: %c", worker);
             break;
@@ -367,5 +432,19 @@ static double hook_evloop_heartbeat(double now)
 void hook_state_changed(void)
 {
     if (SeaCatReactor == NULL) return;
-    return [SeaCatReactor postNotificationName:SeaCat_Notification_StateChanged];
+    [SeaCatReactor updateState];
 }
+
+void hook_gwconn_reset(void)
+{
+    if (SeaCatReactor == NULL) return;
+    [SeaCatReactor onGWConnReset];
+}
+
+void hook_gwconn_connected(void)
+{
+    if (SeaCatReactor == NULL) return;
+//    [SeaCatReactor updateState];
+}
+
+

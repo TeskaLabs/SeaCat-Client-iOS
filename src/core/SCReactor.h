@@ -12,12 +12,16 @@
 @class SCFramePool;
 
 #import "SCFrameProviderProtocol.h"
+#import "../utils/Reachability.h"
 
 @interface SCReactor : NSObject
 
 @property (readonly) SCPingFactory * pingFactory;
 @property (readonly) SCFramePool * framePool;
 @property (readwrite) id<SeaCatCSRDelegate> CSRDelegate;
+@property (readonly) NSString * lastState;
+
+@property (nonatomic) Reachability *networkReachability;
 
 -(SCReactor *)init:(NSString *)appId;
 
