@@ -28,6 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     if ([SeaCatClient isReady]) [self dismissViewControllerAnimated:YES completion:nil];
+    _clientTagLabel.text = [SeaCatClient getClientTag];
     [super viewWillAppear:animated];
 }
 

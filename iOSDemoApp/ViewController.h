@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *pingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *clientTagLabel;
 
 @end
 

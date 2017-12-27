@@ -12,5 +12,6 @@
 
 - (IBAction)onResetAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *stateItem;
+@property (weak, nonatomic) IBOutlet UILabel *clientTagLabel;
 
 @end

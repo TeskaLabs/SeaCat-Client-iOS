@@ -27,6 +27,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self onStateChanged];
+    [self onClientIdChanged];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -41,6 +42,7 @@
 
     taskTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(onTaskTimer) userInfo:nil repeats:YES];
     [SeaCatClient addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
+    [SeaCatClient addObserver:self selector:@selector(onClientIdChanged) name:SeaCat_Notification_ClientIdChanged];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -60,15 +62,22 @@
     [self onStateChanged];
     [SeaCatClient ping:self];
 
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self taskURLRequest_GET];
-    });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        [self taskURLRequest_GET];
+//    });
 }
 
 - (void)onStateChanged
 {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         _stateLabel.text = [SeaCatClient getState];
+    }];
+}
+
+- (void)onClientIdChanged
+{
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        _clientTagLabel.text = [SeaCatClient getClientTag];
     }];
 }
 
