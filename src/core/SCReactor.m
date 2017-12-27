@@ -25,6 +25,7 @@ static double hook_evloop_heartbeat(double now);
 static void hook_state_changed(void);
 static void hook_gwconn_reset(void);
 static void hook_gwconn_connected(void);
+static void hook_clientid_changed(void);
 
 ///
 
@@ -55,6 +56,8 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 @synthesize CSRDelegate;
 @synthesize networkReachability;
 @synthesize lastState;
+@synthesize clientTag;
+@synthesize clientId;
 
 -(SCReactor *)init:(NSString *)appId
 {
@@ -71,7 +74,8 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	readFrame = NULL;
 	writeFrame = NULL;
     lastState = @"?????";
-
+    clientTag = @"[AAAAAAAAAAAAAAAA]";
+    clientId = @"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
     
 	cntlFrameConsumers = [NSMutableDictionary<NSNumber *, id<SCCntlFrameConsumerProtocol>> new];
 	frameProviders = [NSMutableArray<id<SCFrameProviderProtocol>> new];
@@ -89,6 +93,8 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
     rc = seacatcc_hook_register('R', hook_gwconn_reset);
     assert(rc == SEACATCC_RC_OK);
     rc = seacatcc_hook_register('c', hook_gwconn_connected);
+    assert(rc == SEACATCC_RC_OK);
+    rc = seacatcc_hook_register('i', hook_clientid_changed);
     assert(rc == SEACATCC_RC_OK);
 
     
@@ -374,6 +380,14 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
     [self postNotificationName:SeaCat_Notification_GWConnConnected];
 }
 
+-(void)onClientIdChanged:(NSString *)client_id tag:(NSString*)client_tag
+{
+    clientTag = client_tag;
+    clientId = client_id;
+    
+    [self postNotificationName:SeaCat_Notification_ClientIdChanged];
+}
+
 @end
 
 /// Hooks
@@ -450,4 +464,10 @@ void hook_gwconn_connected(void)
 {
     if (SeaCatReactor == NULL) return;
     [SeaCatReactor onGWConnConnected];
+}
+
+void hook_clientid_changed(void)
+{
+    if (SeaCatReactor == NULL) return;
+    [SeaCatReactor onClientIdChanged:[[NSString alloc] initWithUTF8String:seacatcc_client_id()] tag:[[NSString alloc] initWithUTF8String:seacatcc_client_tag()]];
 }

@@ -20,6 +20,8 @@
 @property (readonly) SCFramePool * framePool;
 @property (readwrite) id<SeaCatCSRDelegate> CSRDelegate;
 @property (readonly) NSString * lastState;
+@property (readonly) NSString * clientTag;
+@property (readonly) NSString * clientId;
 
 @property (nonatomic) Reachability *networkReachability;
 

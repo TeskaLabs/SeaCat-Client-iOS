@@ -185,4 +185,30 @@ static NSString * SeaCatApplicationId = nil;
     [center removeObserver:observer name:aName object:SeaCatReactor];
 }
 
+
++ (NSString *)getClientTag
+{
+    if (SeaCatReactor == NULL)
+    {
+        return @"[AAAAAAAAAAAAAAAA]";
+    }
+    else
+    {
+        return [SeaCatReactor clientTag];
+    }
+}
+
++ (NSString *)getClientId
+{
+    if (SeaCatReactor == NULL)
+    {
+        return @"000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+    }
+    else
+    {
+        return [SeaCatReactor clientId];
+    }
+
+}
+
 @end

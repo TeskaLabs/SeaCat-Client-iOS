@@ -52,6 +52,10 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 + (void)removeObserver:(id)observer;
 + (void)removeObserver:(id)observer name:(NSString *)aName;
 
++ (NSString *)getClientTag;
++ (NSString *)getClientId;
+
+
 @end
 
 
@@ -65,6 +69,7 @@ enum SeaCat_ErrorCodes
 extern NSString *const SeaCat_Notification_StateChanged;
 extern NSString *const SeaCat_Notification_GWConnReset;
 extern NSString *const SeaCat_Notification_GWConnConnected;
+extern NSString *const SeaCat_Notification_ClientIdChanged;
 
 
 extern NSString * SeaCatErrorDomain;
