@@ -43,8 +43,9 @@ fi
 # Performs xcodebuild command for a single platform (iphone / simulator)
 # Parameters:
 #   $1   - scheme name
-#   $2   - architecture (i386, arm7, etc...)
-#   $3   - command to execute. You can use 'build' or 'clean'
+#   $2   - configuration (Debug / Release)
+#   $3   - architecture (i386, arm7, etc...)
+#   $4   - command to execute. You can use 'build' or 'clean'
 
 function BUILD_COMMAND
 {
@@ -138,7 +139,7 @@ function CLEAN_SCHEME
 	SCHEME=$1
 	echo "Cleaning architectures..."
 
-	for ARCH in "${ALL_ARCHITECTURES[@]}"
+	for ARCH in ${ARCHS[@]}
 	do
 		BUILD_COMMAND $SCHEME Debug $ARCH clean
 	done
