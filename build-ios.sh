@@ -1,7 +1,7 @@
 #!/bin/sh -e +v
 
 ###############################################################################
-# Build script for Apple platforms
+# Build script for Apple iOS platforms
 #
 # The purpose of this script is to build "fat" libraries for binarty distribution.
 # Typically, this script is used for CocoaPods integration.
@@ -18,11 +18,13 @@
 # ----------------------------------------------------------------------------
 
 ROOTDIR=$(dirname $0)
-TMP_DIR="${ROOTDIR}/tmp"
+TMP_DIR="${ROOTDIR}/build"
 XCODE_PROJECT="${ROOTDIR}/SeaCatClient.xcodeproj"
 
-ARCHS="i386 x86_64 armv7 armv7s arm64"
+ARCHS=(i386 x86_64 armv7 armv7s arm64)
+LIBS=(SeaCatClient)
 IOS_MIN_SDK_VERSION="6.0"
+LIB_DIR="${ROOTDIR}/bin"
 
 # Find various build tools
 XCBUILD=`xcrun -sdk iphoneos -find xcodebuild`
@@ -47,8 +49,9 @@ fi
 function BUILD_COMMAND
 {
 	SCHEME=$1
-	ARCH=$2
-	COMMAND=$3
+	CONF=$2
+	ARCH=$3
+	COMMAND=$4
 
 	if [ "${ARCH}" == "i386" ] || [ "${ARCH}" == "x86_64" ]; then
 		PLATFORM="iphonesimulator"
@@ -64,6 +67,7 @@ function BUILD_COMMAND
 	COMMAND_LINE="${XCBUILD} -project ${XCODE_PROJECT}"
 
 	COMMAND_LINE="$COMMAND_LINE -scheme ${SCHEME} -sdk ${PLATFORM} ${ARCH_SETUP}"
+	COMMAND_LINE="$COMMAND_LINE -configuration ${CONF}"
 	COMMAND_LINE="$COMMAND_LINE -derivedDataPath ${TMP_DIR}/DerivedData"
 	COMMAND_LINE="$COMMAND_LINE BUILD_DIR="${BUILD_DIR}" BUILD_ROOT="${BUILD_DIR}" CODE_SIGNING_REQUIRED=NO ${COMMAND}"
 	echo ${COMMAND_LINE}
@@ -87,9 +91,9 @@ function BUILD_SCHEME
 	CONF=$2
 
 	echo "Building architectures..."
-	for ARCH in ${ARCHS}
+	for ARCH in ${ARCHS[@]}
 	do
-		BUILD_COMMAND $SCHEME $ARCH build
+		BUILD_COMMAND $SCHEME $CONF $ARCH build
 	done
 }
 
@@ -105,16 +109,22 @@ function FAT
 	SCHEME=$1
 	CONF=$2
 
-	# FATalizator
-	echo "Building FAT libraries..."
-	for LIB in ${ARCHS}
+	for LIB in ${LIBS[@]}
 	do
-		LIB_NAME=$(basename $LIB)
-		FATLIB="${LIB_DIR}/${LIB_NAME}"		
-		PLATFORM_LIBS=`find ${TMP_DIR}/${SCHEME} -name ${LIB_NAME}`
-      	echo "FATalizing library  ${LIB_NAME}"
-      	${LIPO} -create ${PLATFORM_LIBS} -output "${FATLIB}"
-  	done
+		echo "FATalizing library ${SCHEME} / ${CONF} / ${LIB}"
+
+		FATLIB_DIR="${LIB_DIR}/ios-${CONF}/${LIB}.framework"
+		
+		PLATFORM_GLOBS=`printf "${TMP_DIR}/${SCHEME}/iphone*-%s/${CONF}-iphone*/${LIB}.framework " ${ARCHS[@]}`
+		PLATFORM_LIBS=(`find ${PLATFORM_GLOBS} -name ${LIB}`)
+
+		rm -rf ${FATLIB_DIR}
+		cp -r $(dirname ${PLATFORM_LIBS[0]}) "${FATLIB_DIR}/"
+		rm "${FATLIB_DIR}/${LIB}"
+
+		${LIPO} -create ${PLATFORM_LIBS[@]} -output "${FATLIB_DIR}/${LIB}"
+
+	done
 }
 
 
@@ -130,7 +140,7 @@ function CLEAN_SCHEME
 
 	for ARCH in "${ALL_ARCHITECTURES[@]}"
 	do
-		BUILD_COMMAND $SCHEME $ARCH clean
+		BUILD_COMMAND $SCHEME Debug $ARCH clean
 	done
 }
 
@@ -139,4 +149,7 @@ mkdir -p ${TMP_DIR}
 
 BUILD_SCHEME SeaCatiOSClient Debug
 BUILD_SCHEME SeaCatiOSClient Release
+
+FAT SeaCatiOSClient Debug
+FAT SeaCatiOSClient Release
 
