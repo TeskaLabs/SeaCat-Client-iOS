@@ -14,6 +14,27 @@
 		DB71D7421F7A765300503F80 /* SeaCatPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DB71D7411F7A765300503F80 /* SeaCatPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB71D7431F7A765300503F80 /* SeaCatPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DB71D7411F7A765300503F80 /* SeaCatPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB71D7441F7A765300503F80 /* SeaCatPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DB71D7411F7A765300503F80 /* SeaCatPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB83976A1FF7C1B500EA0EBD /* SCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FF81C8135B9009A4E34 /* SCFrame.m */; };
+		DB83976B1FF7C1B500EA0EBD /* SCFramePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */; };
+		DB83976C1FF7C1B500EA0EBD /* SCReactor.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF34FFC1C8135B9009A4E34 /* SCReactor.m */; };
+		DB83976D1FF7C1B500EA0EBD /* SCURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1E21C83F50900FC81B4 /* SCURLProtocol.m */; };
+		DB83976E1FF7C1B500EA0EBD /* SCCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1F21C842C5A00FC81B4 /* SCCanonicalRequest.m */; };
+		DB83976F1FF7C1B500EA0EBD /* SCPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350021C8135B9009A4E34 /* SCPing.m */; };
+		DB8397701FF7C1B500EA0EBD /* SCPingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350041C8135B9009A4E34 /* SCPingFactory.m */; };
+		DB8397711FF7C1B500EA0EBD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E57D21FACF6AB00D56C07 /* Reachability.m */; };
+		DB8397721FF7C1B500EA0EBD /* Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500D1C8135B9009A4E34 /* Logging.m */; };
+		DB8397731FF7C1B500EA0EBD /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3500E1C8135B9009A4E34 /* Errors.m */; };
+		DB8397741FF7C1B500EA0EBD /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9FF1ED1C84115900FC81B4 /* Notifications.m */; };
+		DB8397751FF7C1B500EA0EBD /* SCCSR.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350061C8135B9009A4E34 /* SCCSR.m */; };
+		DB8397761FF7C1B500EA0EBD /* SeaCatClientInt.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF350081C8135B9009A4E34 /* SeaCatClientInt.m */; };
+		DB8397771FF7C1B500EA0EBD /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
+		DB8397781FF7C1F900EA0EBD /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FF11C813580009A4E34 /* libcrypto.a */; };
+		DB8397791FF7C1F900EA0EBD /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FF21C813580009A4E34 /* libssl.a */; };
+		DB83977A1FF7C1F900EA0EBD /* libseacatcc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF34FA11C813580009A4E34 /* libseacatcc.a */; };
+		DB8397811FF7C91D00EA0EBD /* SeaCatClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF34F731C8134BC009A4E34 /* SeaCatClient.h */; };
+		DB8397821FF7C9A800EA0EBD /* SeaCatClientInt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF350071C8135B9009A4E34 /* SeaCatClientInt.h */; };
+		DB8397831FF7C9AF00EA0EBD /* SCCSR.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FAF350051C8135B9009A4E34 /* SCCSR.h */; };
+		DB8397841FF7C9B200EA0EBD /* SeaCatPlugin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DB71D7411F7A765300503F80 /* SeaCatPlugin.h */; };
 		DB8E57D31FACF6AB00D56C07 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = DB8E57D11FACF6AB00D56C07 /* Reachability.h */; };
 		DB8E57D41FACF6AB00D56C07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E57D21FACF6AB00D56C07 /* Reachability.m */; };
 		DB8E57D51FACF6B300D56C07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E57D21FACF6AB00D56C07 /* Reachability.m */; };
@@ -141,6 +162,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DB83975F1FF7C19400EA0EBD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Headers/SeaCatClient;
+			dstSubfolderSpec = 16;
+			files = (
+				DB8397811FF7C91D00EA0EBD /* SeaCatClient.h in CopyFiles */,
+				DB8397821FF7C9A800EA0EBD /* SeaCatClientInt.h in CopyFiles */,
+				DB8397831FF7C9AF00EA0EBD /* SCCSR.h in CopyFiles */,
+				DB8397841FF7C9B200EA0EBD /* SeaCatPlugin.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAF3508B1C8137D7009A4E34 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +203,8 @@
 		DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libresolv.9.tbd; sourceTree = DEVELOPER_DIR; };
 		DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeaCatPlugin.m; sourceTree = "<group>"; };
 		DB71D7411F7A765300503F80 /* SeaCatPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatPlugin.h; sourceTree = "<group>"; };
+		DB8397611FF7C19400EA0EBD /* libseacatclientios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libseacatclientios.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB83977B1FF7C3E300EA0EBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DB8E57D11FACF6AB00D56C07 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DB8E57D21FACF6AB00D56C07 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FA88B05E1C815BB000B92F16 /* libseacatcc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libseacatcc.a; sourceTree = "<group>"; };
@@ -389,6 +425,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB83975E1FF7C19400EA0EBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB8397781FF7C1F900EA0EBD /* libcrypto.a in Frameworks */,
+				DB8397791FF7C1F900EA0EBD /* libssl.a in Frameworks */,
+				DB83977A1FF7C1F900EA0EBD /* libseacatcc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAF34F6D1C8134BC009A4E34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +491,14 @@
 				DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB8397621FF7C19400EA0EBD /* SeaCatiOSClient-Static */ = {
+			isa = PBXGroup;
+			children = (
+				DB83977B1FF7C3E300EA0EBD /* README.md */,
+			);
+			path = "SeaCatiOSClient-Static";
 			sourceTree = "<group>";
 		};
 		FA88B05D1C815BB000B92F16 /* seacat-ccore-tvos */ = {
@@ -582,6 +636,7 @@
 			children = (
 				FAF34FF51C8135B9009A4E34 /* src */,
 				FAF34F721C8134BC009A4E34 /* SeaCatiOSClient */,
+				DB8397621FF7C19400EA0EBD /* SeaCatiOSClient-Static */,
 				FAF34FA01C813580009A4E34 /* seacat-ccore-ios */,
 				FAF350711C8137C5009A4E34 /* iOSDemoApp */,
 				FAF34F7F1C8134DC009A4E34 /* SeaCattvOSClient */,
@@ -601,6 +656,7 @@
 				FAF34F981C813522009A4E34 /* SeaCatClient.framework */,
 				FAF350701C8137C5009A4E34 /* iOSDemoApp.app */,
 				FAF350901C813A92009A4E34 /* tvOSDemoApp.app */,
+				DB8397611FF7C19400EA0EBD /* libseacatclientios.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -938,6 +994,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DB8397601FF7C19400EA0EBD /* SeaCatiOSClient-Static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB8397691FF7C19400EA0EBD /* Build configuration list for PBXNativeTarget "SeaCatiOSClient-Static" */;
+			buildPhases = (
+				DB83975D1FF7C19400EA0EBD /* Sources */,
+				DB83975E1FF7C19400EA0EBD /* Frameworks */,
+				DB83975F1FF7C19400EA0EBD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SeaCatiOSClient-Static";
+			productName = "SeaCatiOSClient-Static";
+			productReference = DB8397611FF7C19400EA0EBD /* libseacatclientios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		FAF34F701C8134BC009A4E34 /* SeaCatiOSClient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAF34F761C8134BC009A4E34 /* Build configuration list for PBXNativeTarget "SeaCatiOSClient" */;
@@ -1038,6 +1111,11 @@
 			attributes = {
 				LastUpgradeCheck = 0900;
 				TargetAttributes = {
+					DB8397601FF7C19400EA0EBD = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = P3Q6HRV8FN;
+						ProvisioningStyle = Automatic;
+					};
 					FAF34F701C8134BC009A4E34 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -1069,6 +1147,7 @@
 			projectRoot = "";
 			targets = (
 				FAF34F701C8134BC009A4E34 /* SeaCatiOSClient */,
+				DB8397601FF7C19400EA0EBD /* SeaCatiOSClient-Static */,
 				FAF3506F1C8137C5009A4E34 /* iOSDemoApp */,
 				FAF34F7D1C8134DC009A4E34 /* SeaCattvOSClient */,
 				FAF3508F1C813A92009A4E34 /* tvOSDemoApp */,
@@ -1121,6 +1200,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB83975D1FF7C19400EA0EBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB83976E1FF7C1B500EA0EBD /* SCCanonicalRequest.m in Sources */,
+				DB83976C1FF7C1B500EA0EBD /* SCReactor.m in Sources */,
+				DB8397751FF7C1B500EA0EBD /* SCCSR.m in Sources */,
+				DB83976A1FF7C1B500EA0EBD /* SCFrame.m in Sources */,
+				DB8397741FF7C1B500EA0EBD /* Notifications.m in Sources */,
+				DB83976B1FF7C1B500EA0EBD /* SCFramePool.m in Sources */,
+				DB8397761FF7C1B500EA0EBD /* SeaCatClientInt.m in Sources */,
+				DB8397721FF7C1B500EA0EBD /* Logging.m in Sources */,
+				DB8397771FF7C1B500EA0EBD /* SeaCatPlugin.m in Sources */,
+				DB83976F1FF7C1B500EA0EBD /* SCPing.m in Sources */,
+				DB8397701FF7C1B500EA0EBD /* SCPingFactory.m in Sources */,
+				DB8397711FF7C1B500EA0EBD /* Reachability.m in Sources */,
+				DB83976D1FF7C1B500EA0EBD /* SCURLProtocol.m in Sources */,
+				DB8397731FF7C1B500EA0EBD /* Errors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAF34F6C1C8134BC009A4E34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1248,6 +1348,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DB8397671FF7C19400EA0EBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P3Q6HRV8FN;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INSTALL_PATH = /usr/local/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore-ios/openssl/lib",
+					"$(PROJECT_DIR)/seacat-ccore-ios",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = seacatclientios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB8397681FF7C19400EA0EBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P3Q6HRV8FN;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INSTALL_PATH = /usr/local/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/seacat-ccore-ios/openssl/lib",
+					"$(PROJECT_DIR)/seacat-ccore-ios",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = seacatclientios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		FAF34F5C1C81334B009A4E34 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1850,6 +2034,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB8397691FF7C19400EA0EBD /* Build configuration list for PBXNativeTarget "SeaCatiOSClient-Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB8397671FF7C19400EA0EBD /* Debug */,
+				DB8397681FF7C19400EA0EBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAF34F5B1C81334B009A4E34 /* Build configuration list for PBXProject "SeaCatClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

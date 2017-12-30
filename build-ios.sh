@@ -22,7 +22,6 @@ TMP_DIR="${ROOTDIR}/build"
 XCODE_PROJECT="${ROOTDIR}/SeaCatClient.xcodeproj"
 
 ARCHS=(i386 x86_64 armv7 armv7s arm64)
-LIBS=(SeaCatClient)
 IOS_MIN_SDK_VERSION="6.0"
 LIB_DIR="${ROOTDIR}/bin"
 
@@ -100,7 +99,7 @@ function BUILD_SCHEME
 
 
 # -----------------------------------------------------------------------------
-# Create FAT libraries
+# Create FAT framework
 # Parameters:
 #   $1   - scheme name
 #   $2   - build configuration (e.g. Debug or Release)
@@ -109,24 +108,51 @@ function FAT
 {
 	SCHEME=$1
 	CONF=$2
+	LIB=$3
 
-	for LIB in ${LIBS[@]}
-	do
-		echo "FATalizing library ${SCHEME} / ${CONF} / ${LIB}"
+	echo "FATalizing framework ${SCHEME} / ${CONF} / ${LIB}"
 
-		FATLIB_DIR="${LIB_DIR}/ios-${CONF}/${LIB}.framework"
-		
-		PLATFORM_GLOBS=`printf "${TMP_DIR}/${SCHEME}/iphone*-%s/${CONF}-iphone*/${LIB}.framework " ${ARCHS[@]}`
-		PLATFORM_LIBS=(`find ${PLATFORM_GLOBS} -name ${LIB}`)
+	FATLIB_DIR="${LIB_DIR}/ios-${CONF}/${LIB}.framework"
+	
+	PLATFORM_GLOBS=`printf "${TMP_DIR}/${SCHEME}/iphone*-%s/${CONF}-iphone*/${LIB}.framework " ${ARCHS[@]}`
+	PLATFORM_LIBS=(`find ${PLATFORM_GLOBS} -name ${LIB}`)
 
-		rm -rf ${FATLIB_DIR}
-		cp -r $(dirname ${PLATFORM_LIBS[0]}) "${FATLIB_DIR}/"
-		rm "${FATLIB_DIR}/${LIB}"
+	rm -rf ${FATLIB_DIR}
+	mkdir -p ${FATLIB_DIR}
+	cp -r $(dirname ${PLATFORM_LIBS[0]})/* "${FATLIB_DIR}/"
+	rm "${FATLIB_DIR}/${LIB}"
 
-		${LIPO} -create ${PLATFORM_LIBS[@]} -output "${FATLIB_DIR}/${LIB}"
-
-	done
+	${LIPO} -create ${PLATFORM_LIBS[@]} -output "${FATLIB_DIR}/${LIB}"
 }
+
+
+# -----------------------------------------------------------------------------
+# Create FAT static libraries
+# Parameters:
+#   $1   - scheme name
+#   $2   - build configuration (e.g. Debug or Release)
+# -----------------------------------------------------------------------------
+function FATstatic
+{
+	SCHEME=$1
+	CONF=$2
+	LIB=$3
+
+	echo "FATalizing library ${SCHEME} / ${CONF} / ${LIB}"
+
+	FATLIB_DIR="${LIB_DIR}/ios-${CONF}/${SCHEME}"
+	
+	PLATFORM_GLOBS=`printf "${TMP_DIR}/${SCHEME}/iphone*-%s/${CONF}-iphone*/${LIB} " ${ARCHS[@]}`
+	PLATFORM_LIBS=(`find ${PLATFORM_GLOBS} -name ${LIB}`)
+
+	rm -rf ${FATLIB_DIR}
+	mkdir -p ${FATLIB_DIR}
+	cp -r $(dirname ${PLATFORM_LIBS[0]})/* "${FATLIB_DIR}/"
+	rm "${FATLIB_DIR}/${LIB}"
+
+	${LIPO} -create ${PLATFORM_LIBS[@]} -output "${FATLIB_DIR}/${LIB}"
+}
+
 
 
 # -----------------------------------------------------------------------------
@@ -151,6 +177,14 @@ mkdir -p ${TMP_DIR}
 BUILD_SCHEME SeaCatiOSClient Debug
 BUILD_SCHEME SeaCatiOSClient Release
 
-FAT SeaCatiOSClient Debug
-FAT SeaCatiOSClient Release
+FAT SeaCatiOSClient Debug SeaCatClient
+FAT SeaCatiOSClient Release SeaCatClient
 
+rm -rf ${TMP_DIR}
+mkdir -p ${TMP_DIR}
+
+BUILD_SCHEME SeaCatiOSClient-Static Debug
+FATstatic SeaCatiOSClient-Static Debug libseacatclientios.a
+
+BUILD_SCHEME SeaCatiOSClient-Static Release
+FATstatic SeaCatiOSClient-Static Release libseacatclientios.a
