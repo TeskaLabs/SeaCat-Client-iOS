@@ -100,7 +100,7 @@
 
 -(bool)receivedControlFrame:(SCFrame *)frame reactor:(SCReactor *)reactor frameVersionType:(uint32_t)versiontype frameLength:(uint16_t)lenght frameFlags:(uint8_t)flags
 {
-	uint32_t pingId = [frame get32];
+	uint32_t pingId = [frame load32];
 	
 	if ((pingId % 2) == 1)
 	{

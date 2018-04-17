@@ -296,9 +296,9 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 
 -(bool)receivedControlFrame:(SCFrame *)frame
 {
-	uint32_t frameVersionType = [frame get32] & 0x7fffffff;
+	uint32_t frameVersionType = [frame load32] & 0x7fffffff;
 
-	uint32_t frameLength = [frame get32];
+	uint32_t frameLength = [frame load32];
 	uint8_t frameFlags = (uint8_t)(frameLength >> 24);
 	frameLength &= 0xffffff;
 
