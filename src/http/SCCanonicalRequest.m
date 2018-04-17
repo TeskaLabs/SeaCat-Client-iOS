@@ -56,7 +56,7 @@ static NSString *getDefaultUserAgent()
                 userAgent = mainBundleName;
             }
         } else {
-            userAgent = @"CocoaSPDY/1.0";
+            userAgent = @"SeaCatClient/1.0";
         }
 
         if (cfnetworkName != nil && cfnetworkVersion != nil) {
