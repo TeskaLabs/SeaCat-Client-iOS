@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class SCPingFactory;
+@class SCStreamFactory;
 @class SCFramePool;
 
 #import "SCFrameProviderProtocol.h"
@@ -17,6 +18,7 @@
 @interface SCReactor : NSObject
 
 @property (readonly) SCPingFactory * pingFactory;
+@property (readonly) SCStreamFactory * streamFactory;
 @property (readonly) SCFramePool * framePool;
 @property (readwrite) id<SeaCatCSRDelegate> CSRDelegate;
 @property (readonly) NSString * lastState;

@@ -55,6 +55,8 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 + (NSString *)getClientTag;
 + (NSString *)getClientId;
 
++ (Class)getURLProtocolClass;
++ (NSURLSessionConfiguration *)getNSURLSessionConfiguration;
 
 @end
 

@@ -8,7 +8,13 @@
 
 
 #import <Foundation/Foundation.h>
+#import "SeaCatClient.h"
+#import "SCFrameProviderProtocol.h"
+#import "SCCntlFrameConsumerProtocol.h"
+#import "SCStreamProtocol.h"
 
-@interface SCURLProtocol : NSURLProtocol
+@interface SCURLProtocol : NSURLProtocol <SCFrameProviderProtocol, SCStreamProtocol>
+
+@property (readonly) int32_t streamId;
 
 @end

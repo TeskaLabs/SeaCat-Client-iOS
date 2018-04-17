@@ -8,6 +8,7 @@
 
 #import "SeaCatInternals.h"
 #import "SCPingFactory.h"
+#import "SCStreamFactory.h"
 #import "SCCntlFrameConsumerProtocol.h"
 
 
@@ -52,6 +53,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 }
 
 @synthesize pingFactory;
+@synthesize streamFactory;
 @synthesize framePool;
 @synthesize CSRDelegate;
 @synthesize networkReachability;
@@ -87,7 +89,16 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 		forKey:SPDY_buildFrameVersionType(SEACATCC_SPDY_CNTL_FRAME_VERSION_SPD3, SEACATCC_SPDY_CNTL_TYPE_PING)
 	];
 
-    
+    streamFactory = [SCStreamFactory new];
+    [cntlFrameConsumers
+        setObject:streamFactory
+        forKey:SPDY_buildFrameVersionType(SEACATCC_SPDY_CNTL_FRAME_VERSION_ALX1, SEACATCC_SPDY_CNTL_TYPE_SYN_REPLY)
+    ];
+    [cntlFrameConsumers
+        setObject:streamFactory
+        forKey:SPDY_buildFrameVersionType(SEACATCC_SPDY_CNTL_FRAME_VERSION_SPD3, SEACATCC_SPDY_CNTL_TYPE_RST_STREAM)
+    ];
+
     rc = seacatcc_hook_register('S', hook_state_changed);
     assert(rc == SEACATCC_RC_OK);
     rc = seacatcc_hook_register('R', hook_gwconn_reset);
@@ -101,7 +112,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	// Construct var dir
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
 	NSMutableString *varDir = [[paths objectAtIndex:0] mutableCopy];
-	[varDir appendString:@"/.seacat"];
+	[varDir appendString:SeaCatHostSuffix];
 
 
     rc = seacatcc_init(
@@ -249,8 +260,7 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
 	
 	else
 	{
-		SCLOG_WARN(@"callbackFrameReceived (DATA)!: %@", frame);
-		//giveBackFrame = streamFactory.receivedDataFrame(this, frame);
+        giveBackFrame = [streamFactory receivedDataFrame:frame reactor:self];
 	}
 
 	

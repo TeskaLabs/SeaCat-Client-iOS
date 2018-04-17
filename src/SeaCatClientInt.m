@@ -211,4 +211,17 @@ static NSString * SeaCatApplicationId = nil;
 
 }
 
++ (Class)getURLProtocolClass
+{
+    return [SCURLProtocol class];
+}
+
++ (NSURLSessionConfiguration *)getNSURLSessionConfiguration
+{
+    NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSArray * pc = [NSArray arrayWithObject:[self getURLProtocolClass]];
+    [configuration setProtocolClasses:pc];
+    return configuration;
+}
+
 @end
