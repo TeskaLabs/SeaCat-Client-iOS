@@ -15,6 +15,7 @@
 #import "SCReactor.h"
 #import "SCFramePool.h"
 #import "SCCSR.h"
+#import "SCStreamFactory.h"
 
 #include "spdy.h"
 
