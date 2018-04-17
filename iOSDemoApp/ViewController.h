@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SeaCatClient/SeaCatClient.h"
 
-@interface ViewController : UIViewController <SeaCatPingDelegate>;
+@interface ViewController : UIViewController <SeaCatPingDelegate, NSURLSessionDelegate>;
 
 @property (weak, nonatomic) IBOutlet UILabel *pingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;

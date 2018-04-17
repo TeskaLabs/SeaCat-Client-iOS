@@ -43,6 +43,7 @@
     taskTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(onTaskTimer) userInfo:nil repeats:YES];
     [SeaCatClient addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
     [SeaCatClient addObserver:self selector:@selector(onClientIdChanged) name:SeaCat_Notification_ClientIdChanged];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -61,10 +62,11 @@
 {
     [self onStateChanged];
     [SeaCatClient ping:self];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self taskURLSession_GET];
+    });
 
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        [self taskURLRequest_GET];
-//    });
 }
 
 - (void)onStateChanged
@@ -98,8 +100,9 @@
 
 -(void)taskURLRequest_GET
 {
-    NSMutableString *urlString = [NSMutableString stringWithString:@"http://evalhost.seacat/fortune"];
-    [urlString appendFormat:@"?%@", [[NSBundle mainBundle] bundleIdentifier]];
+    NSMutableString *urlString = [NSMutableString stringWithString:@"http://evalhost.seacat/"];
+    //NSMutableString *urlString = [NSMutableString stringWithString:@"http://example.com/"];
+    //[urlString appendFormat:@"?%@", [[NSBundle mainBundle] bundleIdentifier]];
     
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -127,6 +130,43 @@
          }];
          
      }];
+}
+
+-(void)taskURLSession_GET
+{
+    //NSURL *url = [NSURL URLWithString:@"http://example.com/"];
+    //NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    NSURL *url = [NSURL URLWithString:@"http://evalhost.seacat/"];
+    NSURLSessionConfiguration * configuration = [SeaCatClient getNSURLSessionConfiguration];
+
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    
+    [request setHTTPMethod:@"GET"];
+    NSURLSessionDataTask * task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *connectionError)
+    {
+        NSString * resultText = @"????";
+        if (response != NULL)
+        {
+            resultText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        }
+        
+        else
+        {
+            NSLog(@"NSURLConnection error: %@\n", connectionError);
+            resultText = [NSString stringWithFormat:@"NSURLConnection error:\n%ld\n%@", (long)connectionError.code, connectionError];
+        }
+
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [_resultLabel setText:resultText];
+            [_resultLabel sizeToFit];
+        }];
+    }];
+    
+    [task resume];
 }
 
 @end
