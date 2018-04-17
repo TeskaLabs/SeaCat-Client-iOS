@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2527522084C6F900E488DD /* SCStreamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2527512084C6F900E488DD /* SCStreamFactory.m */; };
 		DB5AEA231FAD371B003C3E4F /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */; };
 		DB71D73E1F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
 		DB71D73F1F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
@@ -200,6 +201,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB2527512084C6F900E488DD /* SCStreamFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCStreamFactory.m; sourceTree = "<group>"; };
+		DB2527532084C72A00E488DD /* SCStreamFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCStreamFactory.h; sourceTree = "<group>"; };
+		DB2527542084D47D00E488DD /* SCStreamProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCStreamProtocol.h; sourceTree = "<group>"; };
 		DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/lib/libresolv.9.tbd; sourceTree = DEVELOPER_DIR; };
 		DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeaCatPlugin.m; sourceTree = "<group>"; };
 		DB71D7411F7A765300503F80 /* SeaCatPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeaCatPlugin.h; sourceTree = "<group>"; };
@@ -836,6 +840,8 @@
 				FAF34FFA1C8135B9009A4E34 /* SCFramePool.m */,
 				FAF34FFB1C8135B9009A4E34 /* SCReactor.h */,
 				FAF34FFC1C8135B9009A4E34 /* SCReactor.m */,
+				DB2527512084C6F900E488DD /* SCStreamFactory.m */,
+				DB2527532084C72A00E488DD /* SCStreamFactory.h */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -845,6 +851,7 @@
 			children = (
 				FAF34FFE1C8135B9009A4E34 /* SCCntlFrameConsumerProtocol.h */,
 				FAF34FFF1C8135B9009A4E34 /* SCFrameProviderProtocol.h */,
+				DB2527542084D47D00E488DD /* SCStreamProtocol.h */,
 			);
 			path = intf;
 			sourceTree = "<group>";
@@ -1233,6 +1240,7 @@
 				FAF3503B1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
 				FA9FF1EE1C84115900FC81B4 /* Notifications.m in Sources */,
 				FAF350231C8135B9009A4E34 /* SCReactor.m in Sources */,
+				DB2527522084C6F900E488DD /* SCStreamFactory.m in Sources */,
 				FAF3504B1C8135B9009A4E34 /* SeaCatClientInt.m in Sources */,
 				DB71D73E1F7A762F00503F80 /* SeaCatPlugin.m in Sources */,
 				DB8E57D41FACF6AB00D56C07 /* Reachability.m in Sources */,
