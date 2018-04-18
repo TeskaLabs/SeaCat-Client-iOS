@@ -64,7 +64,8 @@
     [SeaCatClient ping:self];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self taskURLSession_GET];
+        //[self taskURLSession_GET];
+        [self taskURLSession_POST];
     });
 
 }
@@ -165,6 +166,46 @@
             [_resultLabel sizeToFit];
         }];
     }];
+    
+    [task resume];
+}
+
+
+-(void)taskURLSession_POST
+{
+    //NSURL *url = [NSURL URLWithString:@"http://example.com/"];
+    //NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    NSURL *url = [NSURL URLWithString:@"http://evalhost.seacat/"];
+    NSURLSessionConfiguration * configuration = [SeaCatClient getNSURLSessionConfiguration];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:60.0];
+    
+    request.HTTPMethod =  @"POST";
+    request.HTTPBody = [@"Body ..." dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSURLSessionDataTask * task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *connectionError)
+                                   {
+                                       NSString * resultText = @"????";
+                                       if (response != NULL)
+                                       {
+                                           resultText = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                                       }
+                                       
+                                       else
+                                       {
+                                           NSLog(@"NSURLConnection error: %@\n", connectionError);
+                                           resultText = [NSString stringWithFormat:@"NSURLConnection error:\n%ld\n%@", (long)connectionError.code, connectionError];
+                                       }
+                                       
+                                       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                                           [_resultLabel setText:resultText];
+                                           [_resultLabel sizeToFit];
+                                       }];
+                                   }];
     
     [task resume];
 }

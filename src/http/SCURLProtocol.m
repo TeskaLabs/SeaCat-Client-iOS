@@ -18,12 +18,16 @@ NSString * SeaCatHostSuffix = @".seacat";
     struct {
         BOOL didStartLoading;
         BOOL responseFin;
+        BOOL didSentSynStream;
+        BOOL HTTPBodyStream;
         BOOL didStopLoading;
         BOOL compressedResponse;
     } flags;
     
     int zlibStreamStatus;
     z_stream zlibStream;
+    
+    NSInputStream * bodyStream;
 }
 
 @synthesize streamId;
@@ -72,9 +76,12 @@ NSString * SeaCatHostSuffix = @".seacat";
     
     flags.didStartLoading = NO;
     flags.didStopLoading = NO;
+    flags.HTTPBodyStream = NO;
+    flags.didSentSynStream = NO;
     flags.compressedResponse = NO;
     flags.responseFin = NO;
     streamId = -1;
+    bodyStream = nil;
     
     return [super initWithRequest:request cachedResponse:cachedResponse client:client];
 }
@@ -116,16 +123,77 @@ NSString * SeaCatHostSuffix = @".seacat";
 
 -(SCFrame *)buildFrame:(bool *)keep reactor:(SCReactor *)reactor
 {
+    if (flags.didSentSynStream == NO)
+    {
+        return [self buildFrameSYN_STREAM:keep reactor:reactor];
+    }
+
+    if (bodyStream != nil)
+    {
+        NSLog(@"bodyStream 2 status %lu", (unsigned long)[bodyStream streamStatus]);
+        
+        SCFrame * frame = [reactor.framePool borrow:@"SCURLProtocol.buildFrame"];
+        
+        [frame store32:streamId];
+        uint16_t length_position = frame.position;
+        [frame store32:0];
+        NSInteger bytesRead = [bodyStream read:(frame.bytes + frame.position) maxLength:(frame.capacity - frame.position)];
+        if (bytesRead < 0)
+        {
+            SCLOG_ERROR(@"Reading from HTTP body stream: %@", bodyStream.streamError);
+            return nil;
+        }
+
+        bool fin_flag = ([bodyStream streamStatus] == NSStreamStatusAtEnd);
+        if (bytesRead == 0) fin_flag = true;
+        
+        uint32_t length = (long)bytesRead;
+        if (fin_flag) length |= SEACATCC_SPDY_FLAG_FIN << 24;
+
+        [frame store32at:length_position value:length];
+        [frame advance:length];
+
+        *keep = !fin_flag;
+
+        return frame;
+    }
+    
+    return nil;
+}
+
+-(SCFrame *)buildFrameSYN_STREAM:(bool *)keep reactor:(SCReactor *)reactor
+{
     assert(streamId == -1);
+    assert(flags.didSentSynStream == NO);
+    
     streamId = [reactor.streamFactory registerStream:self];
     
+    bool fin_flag = true;
+    if ([[self request] HTTPBody] != nil)
+    {
+        flags.HTTPBodyStream = NO;
+        fin_flag = false;
+    }
+    else
+    {
+        bodyStream = [[self request] HTTPBodyStream];
+        if (bodyStream != nil)
+        {
+            [bodyStream scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+            [bodyStream open];
+            NSLog(@"bodyStream status %lu", (unsigned long)[bodyStream streamStatus]);
+            flags.HTTPBodyStream = YES;
+            fin_flag = false;
+        }
+    }
+
     // Build header frame, called after startLoading() from a SeaCat
-    SCFrame * frame = [reactor.framePool borrow:@"SCURLProtocol.buildFrame"];
-    [frame buildALX1_SYN_STREAM:self.request streamId:streamId fin_flag:true priority:1];
+    SCFrame * frame = [reactor.framePool borrow:@"SCURLProtocol.buildFrameSYN_STREAM"];
+    [frame buildALX1_SYN_STREAM:self.request streamId:streamId fin_flag:fin_flag priority:1];
 
-    // We are done
-    *keep = false;
-
+    *keep = !fin_flag;
+    flags.didSentSynStream = YES;
+    
     return frame;
 }
 
