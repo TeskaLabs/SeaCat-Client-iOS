@@ -67,6 +67,14 @@
 	position = 0;
 }
 
+
+-(void)advance:(uint16_t)delta_position
+{
+    assert((position+delta_position) <= length);
+    position += delta_position;
+}
+
+
 -(void)store8:(const uint8_t)value
 {
 	assert((position+sizeof(value)) <= length);
@@ -95,7 +103,7 @@
 -(void)store32:(const uint32_t)value
 {
 	assert((position+sizeof(value)) <= length);
-	
+
 	bytes[position++] = 0xFF & (value >> 24);
 	bytes[position++] = 0xFF & (value >> 16);
 	bytes[position++] = 0xFF & (value >> 8);
@@ -106,6 +114,7 @@
 -(void)store24at:(uint16_t)at_position value:(const uint32_t)value
 {
     assert((at_position+sizeof(value)-1) <= length);
+
     bytes[at_position++] = 0xFF & (value >> 16);
     bytes[at_position++] = 0xFF & (value >> 8);
     bytes[at_position++] = 0xFF & value;

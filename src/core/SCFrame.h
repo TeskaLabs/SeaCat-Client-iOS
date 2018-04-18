@@ -29,6 +29,8 @@
 -(void)store32at:(uint16_t)at_position value:(const uint32_t)value;
 -(void)storevle:(NSString *)value;
 
+-(void)advance:(uint16_t)delta_position;
+
 -(uint8_t)get8at:(const uint8_t)position;
 
 -(uint8_t)load8;
