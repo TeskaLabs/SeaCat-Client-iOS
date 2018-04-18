@@ -111,6 +111,15 @@
     bytes[at_position++] = 0xFF & value;
 }
 
+-(void)store32at:(uint16_t)at_position value:(const uint32_t)value
+{
+    assert((at_position+sizeof(value)) <= length);
+    
+    bytes[at_position++] = 0xFF & (value >> 24);
+    bytes[at_position++] = 0xFF & (value >> 16);
+    bytes[at_position++] = 0xFF & (value >> 8);
+    bytes[at_position++] = 0xFF & value;
+}
 
 -(void)storevle:(NSString *)value
 {
