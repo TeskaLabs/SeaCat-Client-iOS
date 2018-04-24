@@ -17,11 +17,6 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 ///
 
 - (void)viewWillAppear:(BOOL)animated
@@ -64,8 +59,8 @@
     [SeaCatClient ping:self];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //[self taskURLSession_GET];
-        [self taskURLSession_POST];
+        [self taskURLSession_GET];
+        //[self taskURLSession_POST];
     });
 
 }
@@ -138,7 +133,7 @@
     //NSURL *url = [NSURL URLWithString:@"http://example.com/"];
     //NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    NSURL *url = [NSURL URLWithString:@"http://evalhost.seacat/"];
+    NSURL *url = [NSURL URLWithString:@"http://evalhost.seacat/hello"];
     NSURLSessionConfiguration * configuration = [SeaCatClient getNSURLSessionConfiguration];
 
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];

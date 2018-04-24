@@ -18,24 +18,18 @@
     NSTimer * periodicTimer;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 ///
 
 - (void)viewWillAppear:(BOOL)animated
 {
     if ([SeaCatClient isReady]) [self dismissViewControllerAnimated:YES completion:nil];
-    _clientTagLabel.text = [SeaCatClient getClientTag];
     [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
+    
     [SeaCatClient addObserver:self selector:@selector(onStateChanged) name:SeaCat_Notification_StateChanged];
     periodicTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(onStateChanged) userInfo:nil repeats:YES];
     [self onStateChanged];
@@ -48,7 +42,7 @@
     [periodicTimer invalidate];
     periodicTimer = nil;
 
-    [super viewWillAppear:animated];
+    [super viewWillDisappear:animated];
 }
 
 ///
@@ -58,6 +52,8 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         NSString * state = [SeaCatClient getState];
         [_stateItem setTitle:state];
+        
+        _clientTagLabel.text = [SeaCatClient getClientTag];
         
         // SeaCat is ready
         if ([SeaCatClient isReady]) [self dismissViewControllerAnimated:YES completion:nil];
