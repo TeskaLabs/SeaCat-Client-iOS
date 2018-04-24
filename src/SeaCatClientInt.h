@@ -52,8 +52,8 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 + (void)removeObserver:(id)observer;
 + (void)removeObserver:(id)observer name:(NSString *)aName;
 
-+ (NSString *)getClientTag;
-+ (NSString *)getClientId;
++ (NSString *)getClientTag NS_SWIFT_NAME(getClientTag());
++ (NSString *)getClientId NS_SWIFT_NAME(getClientId());
 
 + (Class)getURLProtocolClass;
 + (NSURLSessionConfiguration *)getNSURLSessionConfiguration;
