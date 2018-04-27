@@ -58,6 +58,8 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 + (Class)getURLProtocolClass;
 + (NSURLSessionConfiguration *)getNSURLSessionConfiguration;
 
++ (NSData *)deriveKey:(NSString *)keyId keyLength:(int)keyLength;
+
 @end
 
 

@@ -224,4 +224,22 @@ static NSString * SeaCatApplicationId = nil;
     return configuration;
 }
 
+
++ (NSData *)deriveKey:(NSString *)keyId keyLength:(int)keyLength
+{
+    if (![self _reactorReady]) return nil;
+    
+    NSMutableData * mutableData = [NSMutableData dataWithLength:keyLength];
+    
+    int rc = seacatcc_derive_key([keyId UTF8String], keyLength, mutableData.mutableBytes);
+    NSError * error = SeaCatCheckRC(rc, @"seacatcc_socket_configure_worker");
+    if (error != NULL)
+    {
+        SCLOG_ERROR(@"%@", error);
+        return nil;
+    }
+
+    return mutableData;
+}
+
 @end

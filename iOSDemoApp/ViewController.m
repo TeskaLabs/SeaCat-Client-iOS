@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <CommonCrypto/CommonCryptor.h>
 
 @interface ViewController ()
 {
@@ -60,6 +61,7 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self taskURLSession_GET];
+        [self task_AES];
         //[self taskURLSession_POST];
     });
 
@@ -92,7 +94,6 @@
         [_pingLabel setText:@"Ping failed :-("];
     }];
 }
-
 
 -(void)taskURLRequest_GET
 {
@@ -203,6 +204,36 @@
                                    }];
     
     [task resume];
+}
+
+-(void)task_AES
+{
+    NSData * key = [SeaCatClient deriveKey:@"aes-key-1" keyLength:32];
+    
+    size_t outLength;
+    NSData * rawData = [@"Hello world" dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableData *cipherData = [NSMutableData dataWithLength:512];
+    NSMutableData *outData = [NSMutableData dataWithLength:512];
+    
+    CCCryptorStatus result = CCCrypt(kCCEncrypt,
+                                     kCCAlgorithmAES, kCCOptionPKCS7Padding | kCCModeCBC,
+                                     key.bytes, key.length,
+                                     "", // IV
+                                     rawData.bytes, rawData.length,
+                                     cipherData.mutableBytes, cipherData.length,
+                                     &outLength
+                                     );
+    assert(result == kCCSuccess);
+    
+    result = CCCrypt(kCCDecrypt,
+                     kCCAlgorithmAES, kCCOptionPKCS7Padding | kCCModeCBC,
+                     key.bytes, key.length,
+                     "", // IV
+                     cipherData.mutableBytes, outLength,
+                     outData.mutableBytes, outData.length,
+                     &outLength
+                     );
+    assert(result == kCCSuccess);
 }
 
 @end
