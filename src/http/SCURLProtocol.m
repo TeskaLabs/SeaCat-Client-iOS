@@ -116,7 +116,7 @@ NSString * SeaCatHostSuffix = @".seacat";
 
 - (void)stopLoading
 {
-    SCLOG_DEBUG(@"SCURLProtocol >> stopLoading: %@", self);
+//    SCLOG_DEBUG(@"SCURLProtocol >> stopLoading: %@", self);
     
     flags.didStopLoading = YES;
 }
