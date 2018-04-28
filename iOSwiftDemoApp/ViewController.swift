@@ -93,6 +93,10 @@ class ViewController: UIViewController {
         
         task.resume();
     }
+    
+    func taskAES() {
+        let key = SeaCatClient.deriveKey("key-aes-1", keyLength: 32)
+    }
 }
 
 extension ViewController: SeaCatPingDelegate

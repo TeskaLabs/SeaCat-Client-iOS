@@ -58,6 +58,23 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 + (Class)getURLProtocolClass;
 + (NSURLSessionConfiguration *)getNSURLSessionConfiguration;
 
+/*
+ * NSData * key = [SeaCatClient deriveKey:@"aes-key-1" keyLength:32];
+ *
+ * size_t outLength;
+ * NSData * rawData = [@"Hello world" dataUsingEncoding:NSUTF8StringEncoding];
+ * NSMutableData *cipherData = [NSMutableData dataWithLength:512];
+ * NSMutableData *outData = [NSMutableData dataWithLength:512];
+ *
+ * CCCryptorStatus result = CCCrypt(kCCEncrypt,
+ * kCCAlgorithmAES, kCCOptionPKCS7Padding | kCCModeCBC,
+ * key.bytes, key.length,
+ * "", // IV
+ * rawData.bytes, rawData.length,
+ * cipherData.mutableBytes, cipherData.length,
+ * &outLength
+ * );
+*/
 + (NSData *)deriveKey:(NSString *)keyId keyLength:(int)keyLength;
 
 @end
