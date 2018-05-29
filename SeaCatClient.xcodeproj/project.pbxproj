@@ -40,6 +40,7 @@
 		DB8E57D41FACF6AB00D56C07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E57D21FACF6AB00D56C07 /* Reachability.m */; };
 		DB8E57D51FACF6B300D56C07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E57D21FACF6AB00D56C07 /* Reachability.m */; };
 		DB8E57D61FACF6B400D56C07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E57D21FACF6AB00D56C07 /* Reachability.m */; };
+		DBB8587F20BD98A000411BE0 /* SCKeyChainAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8587E20BD98A000411BE0 /* SCKeyChainAuth.m */; };
 		DBE24E7C208F95D700E5729E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE24E7B208F95D700E5729E /* AppDelegate.swift */; };
 		DBE24E7E208F95D700E5729E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE24E7D208F95D700E5729E /* ViewController.swift */; };
 		DBE24E81208F95D700E5729E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE24E7F208F95D700E5729E /* Main.storyboard */; };
@@ -237,6 +238,8 @@
 		DB83977B1FF7C3E300EA0EBD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DB8E57D11FACF6AB00D56C07 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		DB8E57D21FACF6AB00D56C07 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		DBB8587E20BD98A000411BE0 /* SCKeyChainAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCKeyChainAuth.m; sourceTree = "<group>"; };
+		DBB8588020BD98C600411BE0 /* SCKeyChainAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCKeyChainAuth.h; sourceTree = "<group>"; };
 		DBE24E79208F95D700E5729E /* iOSwiftDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSwiftDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE24E7B208F95D700E5729E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBE24E7D208F95D700E5729E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -545,6 +548,15 @@
 				DB83977B1FF7C3E300EA0EBD /* README.md */,
 			);
 			path = "SeaCatiOSClient-Static";
+			sourceTree = "<group>";
+		};
+		DBB8587D20BD983500411BE0 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				DBB8588020BD98C600411BE0 /* SCKeyChainAuth.h */,
+				DBB8587E20BD98A000411BE0 /* SCKeyChainAuth.m */,
+			);
+			path = auth;
 			sourceTree = "<group>";
 		};
 		DBE24E7A208F95D700E5729E /* iOSwiftDemoApp */ = {
@@ -872,6 +884,7 @@
 		FAF34FF51C8135B9009A4E34 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				DBB8587D20BD983500411BE0 /* auth */,
 				FAF34FF61C8135B9009A4E34 /* core */,
 				FAF34FFD1C8135B9009A4E34 /* intf */,
 				FA9FF1E01C83F50900FC81B4 /* http */,
@@ -1345,6 +1358,7 @@
 				FAF3505B1C8135B9009A4E34 /* Logging.m in Sources */,
 				FAF3503B1C8135B9009A4E34 /* SCPingFactory.m in Sources */,
 				FA9FF1EE1C84115900FC81B4 /* Notifications.m in Sources */,
+				DBB8587F20BD98A000411BE0 /* SCKeyChainAuth.m in Sources */,
 				FAF350231C8135B9009A4E34 /* SCReactor.m in Sources */,
 				DB2527522084C6F900E488DD /* SCStreamFactory.m in Sources */,
 				FAF3504B1C8135B9009A4E34 /* SeaCatClientInt.m in Sources */,

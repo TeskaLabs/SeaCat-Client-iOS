@@ -16,6 +16,7 @@
 #import "SCFramePool.h"
 #import "SCCSR.h"
 #import "SCStreamFactory.h"
+#import "SCKeyChainAuth.h"
 
 #include "spdy.h"
 
