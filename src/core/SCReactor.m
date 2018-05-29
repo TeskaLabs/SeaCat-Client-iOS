@@ -131,7 +131,8 @@ static NSNumber * SPDY_buildFrameVersionType(uint16_t cntlFrameVersion, uint16_t
         hook_frame_received,
         hook_frame_return,
         hook_worker_request,
-        hook_evloop_heartbeat
+        hook_evloop_heartbeat,
+        NULL // There is no OpenSSL engine on iOS
     );
 	error = SeaCatCheckRC(rc, @"seacatcc_init");
     if (error != NULL) return NULL;
