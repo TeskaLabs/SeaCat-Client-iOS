@@ -91,6 +91,7 @@ extern NSString *const SeaCat_Notification_StateChanged;
 extern NSString *const SeaCat_Notification_GWConnReset;
 extern NSString *const SeaCat_Notification_GWConnConnected;
 extern NSString *const SeaCat_Notification_ClientIdChanged;
+extern NSString *const SeaCat_Notification_CSRNeeded;
 
 
 extern NSString * SeaCatErrorDomain;
