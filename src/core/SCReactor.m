@@ -440,7 +440,7 @@ static void hook_worker_request(char worker)
                 [[SeaCatReactor CSRDelegate] submit:nil];
 
             });
-            if (SeaCatReactor != null)
+            if (SeaCatReactor != NULL)
             {
                 [SeaCatReactor postNotificationName:SeaCat_Notification_CSRNeeded];
             }
