@@ -17,6 +17,7 @@
 #import "SCCSR.h"
 #import "SCStreamFactory.h"
 #import "SCKeyChainAuth.h"
+#import "SCDeviceSecurity.h"
 
 #include "spdy.h"
 
