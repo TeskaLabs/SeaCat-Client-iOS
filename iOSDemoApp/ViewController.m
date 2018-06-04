@@ -97,7 +97,7 @@
 
 -(void)taskURLRequest_GET
 {
-    NSMutableString *urlString = [NSMutableString stringWithString:@"http://evalhost.seacat/"];
+    NSMutableString *urlString = [NSMutableString stringWithString:@"http://jsontest.seacat/"];
     //NSMutableString *urlString = [NSMutableString stringWithString:@"http://example.com/"];
     //[urlString appendFormat:@"?%@", [[NSBundle mainBundle] bundleIdentifier]];
     
@@ -134,7 +134,7 @@
     //NSURL *url = [NSURL URLWithString:@"http://example.com/"];
     //NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     
-    NSURL *url = [NSURL URLWithString:@"http://evalhost.seacat/hello"];
+    NSURL *url = [NSURL URLWithString:@"http://jsontest.seacat/"];
     NSURLSessionConfiguration * configuration = [SeaCatClient getNSURLSessionConfiguration];
 
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
