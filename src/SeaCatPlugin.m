@@ -80,6 +80,11 @@ static NSMutableArray * SeaCatPlugins = nil;
 //    chrs.add(String.format("%s\037%s", "apN", pInfo.versionName));
 //    chrs.add(String.format("%s\037%s", "apV", pInfo.versionCode));
 
+    if ([SCDeviceSecurity isSimulator])
+    {
+        [characteristics setValue:@"simulator" forKey:@"hwe"]; // Simulator
+    }
+    
     const char * characteristics_c[[characteristics count]+1];
     int i=0;
     for (NSString* key in characteristics)
