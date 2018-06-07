@@ -209,6 +209,7 @@
 -(void)task_AES
 {
     NSData * key = [SeaCatClient deriveKey:@"aes-key-1" keyLength:32];
+    if (key == nil) return;
     
     size_t outLength;
     NSData * rawData = [@"Hello world" dataUsingEncoding:NSUTF8StringEncoding];
