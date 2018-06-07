@@ -82,7 +82,7 @@ static NSMutableArray * SeaCatPlugins = nil;
 
     if ([SCDeviceSecurity isSimulator])
     {
-        [characteristics setValue:@"simulator" forKey:@"hwe"]; // Simulator
+        [characteristics setValue:@"simulator" forKey:@"hwd"]; // Simulator
     }
     
     const char * characteristics_c[[characteristics count]+1];
