@@ -15,6 +15,7 @@ static void _SCLogFnct(char level, const char * message)
 }
 
 static NSString * SeaCatApplicationId = nil;
+static SCKeyChainAuth * SeaCatAuth = nil;
 
 @implementation SeaCatClient
 
@@ -240,6 +241,35 @@ static NSString * SeaCatApplicationId = nil;
     }
 
     return mutableData;
+}
+
++ (SCKeyChainAuth * ) getAuth
+{
+    if (SeaCatAuth == nil)
+    {
+        SeaCatAuth = [SCKeyChainAuth new];
+    }
+
+    return SeaCatAuth;
+}
+
++ (void) setAuthLocalisedReason:(NSString *)reason;
+{
+    SCAuthLocalizedReason = reason;
+}
+
++ (void) startAuth
+{
+    if (![self _reactorReady]) return;
+
+    [[SeaCatClient getAuth] startAuth:SeaCatReactor];
+}
+
++ (void) deauth
+{
+    if (![self _reactorReady]) return;
+    
+    [[SeaCatClient getAuth] deauth:SeaCatReactor];
 }
 
 @end

@@ -8,4 +8,8 @@
 #import <Foundation/Foundation.h>
 
 @interface SCKeyChainAuth : NSObject
+
+-(void)startAuth:(SCReactor *)reactor;
+-(void)deauth:(SCReactor *)reactor;
+
 @end

@@ -77,6 +77,10 @@ typedef NS_OPTIONS(NSUInteger, SCLogFlag) {
 */
 + (NSData *)deriveKey:(NSString *)keyId keyLength:(int)keyLength;
 
++ (void) startAuth;
++ (void) deauth;
++ (void) setAuthLocalisedReason:(NSString *)reason;
+
 @end
 
 

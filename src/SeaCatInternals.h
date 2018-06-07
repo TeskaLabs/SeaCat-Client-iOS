@@ -28,6 +28,8 @@
 NSError * SeaCatCheckRC(int rc, NSString * message);
 NSError * SeaCatError(enum SeaCat_ErrorCodes, NSString * message);
 
+extern NSString * SCAuthLocalizedReason;
+
 // Logging
 void _SCLog(char level, NSString * message);
 void _SCLogV(char level, NSString *format, ...);

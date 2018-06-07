@@ -450,6 +450,11 @@ static void hook_worker_request(char worker)
         case 'n':
             break;
 
+        case 's':
+            SCLOG_DEBUG(@"Secret key requested.");
+            [SeaCatClient startAuth];
+            break;
+
         default:
             SCLOG_WARN(@"Unknown worker requested: %c", worker);
             break;
