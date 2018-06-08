@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>v1710-beta.3</string>
+	<string>17.10.13</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>v1710-beta.3</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>
