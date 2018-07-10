@@ -13,6 +13,12 @@
 		DB30971020C57A85006488CD /* SCDeviceSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = DB30970D20C57A1D006488CD /* SCDeviceSecurity.m */; };
 		DB30971120C57A8A006488CD /* SCDeviceSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = DB30970D20C57A1D006488CD /* SCDeviceSecurity.m */; };
 		DB30971220C57A8A006488CD /* SCDeviceSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = DB30970D20C57A1D006488CD /* SCDeviceSecurity.m */; };
+		DB38DCFA20CFE547005E5459 /* SCKeyChainAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8587E20BD98A000411BE0 /* SCKeyChainAuth.m */; };
+		DB38DCFB20CFE548005E5459 /* SCKeyChainAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8587E20BD98A000411BE0 /* SCKeyChainAuth.m */; };
+		DB38DCFC20CFE549005E5459 /* SCKeyChainAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB8587E20BD98A000411BE0 /* SCKeyChainAuth.m */; };
+		DB38DCFD20CFE557005E5459 /* SCStreamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2527512084C6F900E488DD /* SCStreamFactory.m */; };
+		DB38DCFE20CFE558005E5459 /* SCStreamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2527512084C6F900E488DD /* SCStreamFactory.m */; };
+		DB38DCFF20CFE558005E5459 /* SCStreamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2527512084C6F900E488DD /* SCStreamFactory.m */; };
 		DB5AEA231FAD371B003C3E4F /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5AEA221FAD370C003C3E4F /* libresolv.9.tbd */; };
 		DB71D73E1F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
 		DB71D73F1F7A762F00503F80 /* SeaCatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DB71D73D1F7A762F00503F80 /* SeaCatPlugin.m */; };
@@ -1342,9 +1348,11 @@
 				DB8397771FF7C1B500EA0EBD /* SeaCatPlugin.m in Sources */,
 				DB83976F1FF7C1B500EA0EBD /* SCPing.m in Sources */,
 				DB8397701FF7C1B500EA0EBD /* SCPingFactory.m in Sources */,
+				DB38DCFD20CFE557005E5459 /* SCStreamFactory.m in Sources */,
 				DB8397711FF7C1B500EA0EBD /* Reachability.m in Sources */,
 				DB83976D1FF7C1B500EA0EBD /* SCURLProtocol.m in Sources */,
 				DB8397731FF7C1B500EA0EBD /* Errors.m in Sources */,
+				DB38DCFA20CFE547005E5459 /* SCKeyChainAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1398,9 +1406,11 @@
 				FAF3504C1C8135B9009A4E34 /* SeaCatClientInt.m in Sources */,
 				DB71D73F1F7A762F00503F80 /* SeaCatPlugin.m in Sources */,
 				DB8E57D51FACF6B300D56C07 /* Reachability.m in Sources */,
+				DB38DCFE20CFE558005E5459 /* SCStreamFactory.m in Sources */,
 				FAF350341C8135B9009A4E34 /* SCPing.m in Sources */,
 				FA9FF1F71C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
 				FA9FF1E71C83F50900FC81B4 /* SCURLProtocol.m in Sources */,
+				DB38DCFB20CFE548005E5459 /* SCKeyChainAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1420,9 +1430,11 @@
 				FAF3504E1C8135B9009A4E34 /* SeaCatClientInt.m in Sources */,
 				DB71D7401F7A762F00503F80 /* SeaCatPlugin.m in Sources */,
 				DB8E57D61FACF6B400D56C07 /* Reachability.m in Sources */,
+				DB38DCFF20CFE558005E5459 /* SCStreamFactory.m in Sources */,
 				FAF350361C8135B9009A4E34 /* SCPing.m in Sources */,
 				FA9FF1F81C842C5A00FC81B4 /* SCCanonicalRequest.m in Sources */,
 				FA9FF1E81C83F50900FC81B4 /* SCURLProtocol.m in Sources */,
+				DB38DCFC20CFE549005E5459 /* SCKeyChainAuth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
