@@ -9,11 +9,7 @@
 # The result of the build process is one multi-architecture static library (also 
 # called as "fat") with all supported microprocessor architectures in one file.
 # 
-# Script is using following folders (if not changed):
 #
-#    ./lib/Debug       - result of debug configuration
-#    ./lib/Release     - result of release configuration
-#    ./tmp             - for all temporary data
 #
 # ----------------------------------------------------------------------------
 
@@ -78,7 +74,6 @@ function BUILD_COMMAND
 	fi
 }
 
-
 # -----------------------------------------------------------------------------
 # Build scheme for both plaforms
 # Parameters:
@@ -103,6 +98,7 @@ function BUILD_SCHEME
 # Parameters:
 #   $1   - scheme name
 #   $2   - build configuration (e.g. Debug or Release)
+#   $3   - Framework/library name
 # -----------------------------------------------------------------------------
 function FAT
 {
