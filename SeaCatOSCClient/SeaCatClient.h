@@ -7,7 +7,7 @@
 //
 // This is umbreala header file
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for SeaCatClient.
 FOUNDATION_EXPORT double SeaCatClientVersionNumber;
