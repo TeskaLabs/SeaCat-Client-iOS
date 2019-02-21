@@ -10,6 +10,7 @@
 # called as "fat") with all supported microprocessor architectures in one file.
 # 
 #
+# Use: CODE_SIGN_IDENTITY="TeskaLabs Ltd" ./build-ios.sh
 #
 # ----------------------------------------------------------------------------
 
@@ -186,3 +187,8 @@ FATstatic SeaCatiOSClient-Static Debug libseacatclientios.a
 
 BUILD_SCHEME SeaCatiOSClient-Static Release
 FATstatic SeaCatiOSClient-Static Release libseacatclientios.a
+
+echo "Signing ..."
+codesign -f -s "${CODE_SIGN_IDENTITY}" -vvv ./bin/ios-Release/SeaCatClient.framework
+codesign -f -s "${CODE_SIGN_IDENTITY}" -vvv ./bin/ios-Debug/SeaCatClient.framework
+
