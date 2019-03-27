@@ -110,16 +110,20 @@ function FAT
 	echo "FATalizing framework ${SCHEME} / ${CONF} / ${LIB}"
 
 	FATLIB_DIR="${LIB_DIR}/ios-${CONF}/${LIB}.framework"
-	
-	PLATFORM_GLOBS=`printf "${TMP_DIR}/${SCHEME}/iphone*-%s/${CONF}-iphone*/${LIB}.framework " ${ARCHS[@]}`
-	PLATFORM_LIBS=(`find ${PLATFORM_GLOBS} -name ${LIB}`)
+	PLATFORM_LIB1="./build/${SCHEME}/iphoneos-arm64/${CONF}-iphoneos/${LIB}.framework/${LIB}"
+
+	PLATFORM_LIBS=${PLATFORM_LIB1}
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphoneos-armv7s/${CONF}-iphoneos/${LIB}.framework/${LIB}"
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphoneos-armv7/${CONF}-iphoneos/${LIB}.framework/${LIB}"
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphonesimulator-x86_64/${CONF}-iphonesimulator/${LIB}.framework/${LIB}"
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphonesimulator-i386/${CONF}-iphonesimulator/${LIB}.framework/${LIB}"
 
 	rm -rf ${FATLIB_DIR}
 	mkdir -p ${FATLIB_DIR}
-	cp -r $(dirname ${PLATFORM_LIBS[0]})/* "${FATLIB_DIR}/"
+	cp -r $(dirname ${PLATFORM_LIB1})/* "${FATLIB_DIR}/"
 	rm "${FATLIB_DIR}/${LIB}"
 
-	${LIPO} -create ${PLATFORM_LIBS[@]} -output "${FATLIB_DIR}/${LIB}"
+	${LIPO} -create ${PLATFORM_LIBS} -output "${FATLIB_DIR}/${LIB}"
 
 	echo "Output is in ${FATLIB_DIR}/${LIB}"
 }
@@ -142,14 +146,22 @@ function FATstatic
 	FATLIB_DIR="${LIB_DIR}/ios-${CONF}/${SCHEME}"
 	
 	PLATFORM_GLOBS=`printf "${TMP_DIR}/${SCHEME}/iphone*-%s/${CONF}-iphone*/${LIB} " ${ARCHS[@]}`
-	PLATFORM_LIBS=(`find ${PLATFORM_GLOBS} -name ${LIB}`)
+	PLATFORM_LIB1="./build/${SCHEME}/iphoneos-arm64/${CONF}-iphoneos/${LIB}"
+
+	PLATFORM_LIBS=${PLATFORM_LIB1}
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphoneos-armv7s/${CONF}-iphoneos/${LIB}"
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphoneos-armv7/${CONF}-iphoneos/${LIB}"
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphonesimulator-x86_64/${CONF}-iphonesimulator/${LIB}"
+	PLATFORM_LIBS+=" ./build/${SCHEME}/iphonesimulator-i386/${CONF}-iphonesimulator/${LIB}"
 
 	rm -rf ${FATLIB_DIR}
 	mkdir -p ${FATLIB_DIR}
-	cp -r $(dirname ${PLATFORM_LIBS[0]})/* "${FATLIB_DIR}/"
+	cp -r $(dirname ${PLATFORM_LIB1})/* "${FATLIB_DIR}/"
 	rm "${FATLIB_DIR}/${LIB}"
 
-	${LIPO} -create ${PLATFORM_LIBS[@]} -output "${FATLIB_DIR}/${LIB}"
+	${LIPO} -create ${PLATFORM_LIBS} -output "${FATLIB_DIR}/${LIB}"
+
+	echo "Output is in ${FATLIB_DIR}/${LIB}"
 }
 
 
