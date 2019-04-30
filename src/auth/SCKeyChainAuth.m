@@ -16,7 +16,6 @@ NSString * SCAuthLocalizedReason = nil;
 @implementation SCKeyChainAuth
 {
     NSData* tag;
-    SecAccessControlRef access;
     id requireUserAuth;
     int32_t authSemaphore;
 }
@@ -32,13 +31,6 @@ NSString * SCAuthLocalizedReason = nil;
         requireUserAuth = [info objectForKey:@"seacat.require_user_auth"];
         if ((requireUserAuth) && (![SCDeviceSecurity hasBiometrics]))
             requireUserAuth = FALSE;
-
-        access = SecAccessControlCreateWithFlags(
-            kCFAllocatorDefault,
-            kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
-            kSecAccessControlPrivateKeyUsage, //touchIDAny ?
-            NULL
-        );
         
         authSemaphore = 0;
     }
@@ -73,6 +65,13 @@ NSString * SCAuthLocalizedReason = nil;
         if ([SCDeviceSecurity hasSecureEnclave])
         {
             // Variant with Secure Enclave
+            SecAccessControlRef access = SecAccessControlCreateWithFlags(
+                 kCFAllocatorDefault,
+                 kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+                 kSecAccessControlPrivateKeyUsage, //touchIDAny ?
+                 NULL
+            );
+
             attributes = @{
                 (id)kSecAttrKeyType:             (id)kSecAttrKeyTypeECSECPrimeRandom,
                 (id)kSecAttrKeySizeInBits:       @256,
@@ -86,6 +85,13 @@ NSString * SCAuthLocalizedReason = nil;
         } else {
             SCLOG_WARN(@"No secure enclave detected, the security of the master private key is limmited.");
             // Variant with no Secure Enclave
+            SecAccessControlRef access = SecAccessControlCreateWithFlags(
+                 kCFAllocatorDefault,
+                 kSecAttrAccessibleAlwaysThisDeviceOnly,
+                 0,
+                 NULL
+             );
+
             attributes = @{
                 (id)kSecAttrKeyType:             (id)kSecAttrKeyTypeEC,
                 (id)kSecAttrKeySizeInBits:       @256,
@@ -95,6 +101,7 @@ NSString * SCAuthLocalizedReason = nil;
                     (id)kSecAttrAccessControl:   (__bridge id)access,
                 },
             };
+            
         }
         
         SCLOG_DEBUG(@"Generating master key ...");
